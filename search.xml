@@ -60,11 +60,19 @@
 <p>给文章添加“tags”属性,打开需要添加标签的文章，为其添加tags属性。</p>
 <figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">title:</span> <span class="string">Hexo</span> <span class="string">添加分类及标签</span></span><br><span class="line"><span class="attr">date:</span> <span class="number">2019-04-24 15:40:24</span></span><br><span class="line"><span class="attr">categories:</span> </span><br><span class="line">           <span class="bullet">-</span> <span class="string">Hexo</span></span><br><span class="line"><span class="attr">tags:</span></span><br><span class="line">           <span class="bullet">-</span> <span class="string">博客</span></span><br><span class="line"><span class="meta">---</span></span><br></pre></td></tr></table></figure>
 <h3 id="添加-RSS-订阅功能"><a href="#添加-RSS-订阅功能" class="headerlink" title="添加 RSS 订阅功能"></a>添加 RSS 订阅功能</h3><ul>
-<li>安装插件<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm install hexo-generator-feed</span><br></pre></td></tr></table></figure></li>
+<li>安装插件：<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm install hexo-generator-feed</span><br></pre></td></tr></table></figure></li>
 <li>修改hexo的_config.yml，新增如下：<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment">#Feed Atom</span></span><br><span class="line"><span class="attr">feed:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">atom</span></span><br><span class="line">  <span class="attr">path:</span> <span class="string">atom.xml</span></span><br><span class="line">  <span class="attr">limit:</span> <span class="number">20</span></span><br></pre></td></tr></table></figure></li>
 <li>修改主题Rss相关，打开开关即可。</li>
 </ul>
 </li>
+</ul>
+<h3 id="关于typora插入图片后hexo生成路径问题"><a href="#关于typora插入图片后hexo生成路径问题" class="headerlink" title="关于typora插入图片后hexo生成路径问题"></a>关于typora插入图片后hexo生成路径问题</h3><ul>
+<li>安装插件 hexo-image-link<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-image-link --save</span><br></pre></td></tr></table></figure></li>
+<li>修改hexo的_config.yml   <figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">post_asset_folder:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+<h3 id="其他：插入视频"><a href="#其他：插入视频" class="headerlink" title="其他：插入视频"></a>其他：插入视频</h3>具体参考：<a href="https://hexo.io/docs/tag-plugins">https://hexo.io/docs/tag-plugins</a></li>
+<li>youtube<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% youtube video<span class="emphasis">_id [type] [cookie] %&#125;</span></span><br></pre></td></tr></table></figure>
+例如:<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% youtube lJIrF4YjHfQ %&#125;</span><br><span class="line">也可以插入播放列表</span><br><span class="line">&#123;% youtube PL9hW1uS6HUfscJ9DHkOSoOX45MjXduUxo &#x27;playlist&#x27; %&#125;</span><br></pre></td></tr></table></figure>
+例子见<a href="/2020/09/23/hello-world/" title="HelloWorld">HelloWorld</a></li>
 </ul>
 ]]></content>
       <categories>
@@ -156,6 +164,9 @@ B --> E[(数据库咯)]</pre>
 李雷 ->> 韩梅梅: Hello 梅梅, How are you?
 Note right of 韩梅梅: 韩梅梅心想
 韩梅梅 -->> 李雷: I'm fine, thanks, and you?</pre>
+<h3 id="插入图片和视频"><a href="#插入图片和视频" class="headerlink" title="插入图片和视频"></a>插入图片和视频</h3><img src="/2020/09/23/hello-world/AATXAJxGuKHSLR85PjmoVFasD759vl6uiK7CY2LCj1MYpQ=s176-c-k-c0xffffffff-no-nd-rj.jpeg" class="" title="img">
+
+<div class="video-container"><iframe src="https://www.youtube.com/embed/U1eQfA3fXa4" frameborder="0" loading="lazy" allowfullscreen></iframe></div>
 ]]></content>
       <categories>
         <category>Hexo</category>
