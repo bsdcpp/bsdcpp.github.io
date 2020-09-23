@@ -68,11 +68,15 @@
 </ul>
 <h3 id="关于typora插入图片后hexo生成路径问题"><a href="#关于typora插入图片后hexo生成路径问题" class="headerlink" title="关于typora插入图片后hexo生成路径问题"></a>关于typora插入图片后hexo生成路径问题</h3><ul>
 <li>安装插件 hexo-image-link<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-image-link --save</span><br></pre></td></tr></table></figure></li>
-<li>修改hexo的_config.yml   <figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">post_asset_folder:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
-<h3 id="其他：插入视频"><a href="#其他：插入视频" class="headerlink" title="其他：插入视频"></a>其他：插入视频</h3>具体参考：<a href="https://hexo.io/docs/tag-plugins">https://hexo.io/docs/tag-plugins</a></li>
+<li>修改hexo的_config.yml<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">post_asset_folder:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h3 id="其他：插入视频"><a href="#其他：插入视频" class="headerlink" title="其他：插入视频"></a>其他：插入视频</h3><p> 具体参考：<a href="https://hexo.io/docs/tag-plugins">https://hexo.io/docs/tag-plugins</a></p>
+<ul>
 <li>youtube<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% youtube video<span class="emphasis">_id [type] [cookie] %&#125;</span></span><br></pre></td></tr></table></figure>
 例如:<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% youtube lJIrF4YjHfQ %&#125;</span><br><span class="line">也可以插入播放列表</span><br><span class="line">&#123;% youtube PL9hW1uS6HUfscJ9DHkOSoOX45MjXduUxo &#x27;playlist&#x27; %&#125;</span><br></pre></td></tr></table></figure>
-例子见<a href="/2020/09/23/hello-world/" title="HelloWorld">HelloWorld</a></li>
+例子见：<a href="/2020/09/23/hello-world/" title="Hello World">Hello World</a></li>
 </ul>
 ]]></content>
       <categories>
