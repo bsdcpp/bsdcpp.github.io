@@ -2,35 +2,35 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://example.com/2020/09/20/hello-world/</loc>
+    <loc>https://bsdcpp.github.io/2020/09/20/Hexo-%E4%BD%BF%E7%94%A8%E5%A4%87%E5%BF%98/</loc>
     
-    <lastmod>2020-09-22</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://example.com/2020/09/20/Hexo-%E4%BD%BF%E7%94%A8%E5%A4%87%E5%BF%98/</loc>
-    
-    <lastmod>2020-09-22</lastmod>
+    <lastmod>2020-09-23</lastmod>
     
   </url>
   
   <url>
-    <loc>http://example.com/about/index.html</loc>
+    <loc>https://bsdcpp.github.io/2020/09/23/hello-world/</loc>
     
-    <lastmod>2020-09-22</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://example.com/tags/index.html</loc>
-    
-    <lastmod>2020-09-22</lastmod>
+    <lastmod>2020-09-23</lastmod>
     
   </url>
   
   <url>
-    <loc>http://example.com/categories/index.html</loc>
+    <loc>https://bsdcpp.github.io/tags/index.html</loc>
+    
+    <lastmod>2020-09-23</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://bsdcpp.github.io/categories/index.html</loc>
+    
+    <lastmod>2020-09-23</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://bsdcpp.github.io/about/index.html</loc>
     
     <lastmod>2020-09-22</lastmod>
     
@@ -38,20 +38,41 @@
   
 
   <url>
-    <loc>http://example.com/</loc>
-    <lastmod>2020-09-22</lastmod>
+    <loc>https://bsdcpp.github.io/</loc>
+    <lastmod>2020-09-23</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
 
   
   <url>
-    <loc>http://example.com/tags/Hexo/</loc>
-    <lastmod>2020-09-22</lastmod>
+    <loc>https://bsdcpp.github.io/tags/Hexo/</loc>
+    <lastmod>2020-09-23</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://bsdcpp.github.io/tags/Next/</loc>
+    <lastmod>2020-09-23</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://bsdcpp.github.io/tags/hexo/</loc>
+    <lastmod>2020-09-23</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
 
+  
+  <url>
+    <loc>https://bsdcpp.github.io/categories/Hexo/</loc>
+    <lastmod>2020-09-23</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
   
 </urlset>
