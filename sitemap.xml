@@ -2,7 +2,21 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://bsdcpp.github.io/2020/08/30/MacOS%E4%BD%BF%E7%94%A8%E8%AE%B0%E5%BD%95/</loc>
+    <loc>https://bsdcpp.github.io/2020/10/26/%E6%81%B6%E9%AD%94%E5%A5%B6%E7%88%B8%E8%8B%B1%E8%AF%AD%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95%EF%BC%88%E8%BD%AC%EF%BC%89/</loc>
+    
+    <lastmod>2020-12-12</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://bsdcpp.github.io/2020/10/14/%E5%90%84%E7%A7%91%E5%AD%A6%E6%9C%9F%E5%B0%8F%E7%BB%93/</loc>
+    
+    <lastmod>2020-12-12</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://bsdcpp.github.io/2020/10/02/vim%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/</loc>
     
     <lastmod>2020-12-12</lastmod>
     
@@ -11,28 +25,14 @@
   <url>
     <loc>https://bsdcpp.github.io/2020/11/23/Docker-macvlan%E4%BD%BF%E7%94%A8%E8%AE%B0%E5%BD%95/</loc>
     
-    <lastmod>2020-12-10</lastmod>
+    <lastmod>2020-12-12</lastmod>
     
   </url>
   
   <url>
-    <loc>https://bsdcpp.github.io/2020/10/26/%E6%81%B6%E9%AD%94%E5%A5%B6%E7%88%B8%E8%8B%B1%E8%AF%AD%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95%EF%BC%88%E8%BD%AC%EF%BC%89/</loc>
+    <loc>https://bsdcpp.github.io/2020/08/30/MacOS%E4%BD%BF%E7%94%A8%E8%AE%B0%E5%BD%95/</loc>
     
-    <lastmod>2020-10-26</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://bsdcpp.github.io/2020/10/14/%E5%90%84%E7%A7%91%E5%AD%A6%E6%9C%9F%E5%B0%8F%E7%BB%93/</loc>
-    
-    <lastmod>2020-10-15</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://bsdcpp.github.io/2020/10/02/vim%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/</loc>
-    
-    <lastmod>2020-10-02</lastmod>
+    <lastmod>2020-12-12</lastmod>
     
   </url>
   

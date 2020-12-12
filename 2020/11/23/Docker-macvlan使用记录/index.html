@@ -32,7 +32,7 @@
 <meta property="og:description" content="新建macvlan接口12345678#新建macvlan网络docker network create -d macvlan -o parent&#x3D;【eth0】 【eNet】 \--subnet&#x3D;【Network IP】 \--ip-range&#x3D;【IP Range】 \--gateway&#x3D;【Gateway IP】例子：docker network create -d macvlan -o pare">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-11-23T10:29:46.000Z">
-<meta property="article:modified_time" content="2020-12-10T14:23:09.554Z">
+<meta property="article:modified_time" content="2020-12-12T11:14:32.370Z">
 <meta property="article:author" content="Ginger">
 <meta property="article:tag" content="docker">
 <meta name="twitter:card" content="summary">
@@ -218,7 +218,7 @@
 
       <!--noindex-->
       <section class="post-toc-wrap sidebar-panel">
-          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%96%B0%E5%BB%BAmacvlan%E6%8E%A5%E5%8F%A3"><span class="nav-number">1.</span> <span class="nav-text">新建macvlan接口</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Dockerfile%EF%BC%9A"><span class="nav-number">2.</span> <span class="nav-text">Dockerfile：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%90%8E%E7%BB%AD%E5%AE%8C%E5%96%84"><span class="nav-number">3.</span> <span class="nav-text">后续完善</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BF%AE%E6%94%B9%E5%B7%B2%E7%BB%8F%E5%AD%98%E5%9C%A8%E7%9A%84%E5%AE%B9%E5%99%A8%E9%85%8D%E7%BD%AE"><span class="nav-number">4.</span> <span class="nav-text">修改已经存在的容器配置</span></a></li></ol></div>
+          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%96%B0%E5%BB%BAmacvlan%E6%8E%A5%E5%8F%A3"><span class="nav-number">1.</span> <span class="nav-text">新建macvlan接口</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Dockerfile%EF%BC%9A"><span class="nav-number">2.</span> <span class="nav-text">Dockerfile：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98"><span class="nav-number">3.</span> <span class="nav-text">一些问题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%90%8E%E7%BB%AD%E5%AE%8C%E5%96%84"><span class="nav-number">4.</span> <span class="nav-text">后续完善</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BF%AE%E6%94%B9%E5%B7%B2%E7%BB%8F%E5%AD%98%E5%9C%A8%E7%9A%84%E5%AE%B9%E5%99%A8%E9%85%8D%E7%BD%AE"><span class="nav-number">5.</span> <span class="nav-text">修改已经存在的容器配置</span></a></li></ol></div>
       </section>
       <!--/noindex-->
 
@@ -327,7 +327,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2020-12-10 22:23:09" itemprop="dateModified" datetime="2020-12-10T22:23:09+08:00">2020-12-10</time>
+        <time title="修改时间：2020-12-12 19:14:32" itemprop="dateModified" datetime="2020-12-12T19:14:32+08:00">2020-12-12</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -361,7 +361,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>1.8k</span>
+      <span>1.9k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -381,20 +381,23 @@
     <div class="post-body" itemprop="articleBody">
         <h4 id="新建macvlan接口"><a href="#新建macvlan接口" class="headerlink" title="新建macvlan接口"></a>新建macvlan接口</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#新建macvlan网络</span></span><br><span class="line">docker network create -d macvlan -o parent=【eth0】 【eNet】 \</span><br><span class="line">--subnet=【Network IP】 \</span><br><span class="line">--ip-range=【IP Range】 \</span><br><span class="line">--gateway=【Gateway IP】</span><br><span class="line"></span><br><span class="line">例子：</span><br><span class="line">docker network create -d macvlan -o parent=eth0 macnet --subnet=192.168.2.0/24 --ip-range=192.168.2.249/28 --gateway=192.168.2.1</span><br></pre></td></tr></table></figure>
 
+<a id="more"></a>
 
-
-<h4 id="Dockerfile："><a href="#Dockerfile：" class="headerlink" title="Dockerfile："></a>Dockerfile：</h4><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">FROM debian:latest</span><br><span class="line">COPY start.sh torrc /tmp/</span><br><span class="line">RUN apt-get update \</span><br><span class="line">    &amp;&amp; apt-get -y install openssh-server tor cron sudo \</span><br><span class="line">        &amp;&amp; rm -rf /var/lib/apt/lists/* \</span><br><span class="line">    &amp;&amp; cat /tmp/torrc &gt;&gt; /etc/tor/torrc \</span><br><span class="line">        &amp;&amp; chmod +x /tmp/start.sh \</span><br><span class="line">        &amp;&amp; useradd -d /home/jervis -M -s /bin/bash -g root -G sudo jervis \</span><br><span class="line">        &amp;&amp; echo &quot;jervis:1&quot;|chpasswd \</span><br><span class="line">        &amp;&amp; echo &quot;root:1&quot;|chpasswd</span><br><span class="line"></span><br><span class="line">ENTRYPOINT [&quot;/bin/sh&quot;, &quot;/tmp/start.sh&quot;]</span><br></pre></td></tr></table></figure>
+<h4 id="Dockerfile："><a href="#Dockerfile：" class="headerlink" title="Dockerfile："></a>Dockerfile：</h4><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">FROM debian:latest</span><br><span class="line">COPY start.sh torrc /tmp/</span><br><span class="line">RUN apt-get update \</span><br><span class="line">    &amp;&amp; apt-get -y install openssh-server tor cron sudo rsyslog \</span><br><span class="line">	&amp;&amp; rm -rf /var/lib/apt/lists/* \</span><br><span class="line">    &amp;&amp; cat /tmp/torrc &gt;&gt; /etc/tor/torrc \</span><br><span class="line">	&amp;&amp; chmod +x /tmp/start.sh \</span><br><span class="line">	&amp;&amp; useradd -d /home/jervis -M -s /bin/bash -g root -G sudo jervis \</span><br><span class="line">	&amp;&amp; echo &quot;root:1&quot;|chpasswd \</span><br><span class="line">	&amp;&amp; echo &quot;jervis:1&quot;|chpasswd</span><br><span class="line"></span><br><span class="line">ENTRYPOINT [&quot;/bin/sh&quot;, &quot;/tmp/start.sh&quot;]</span><br></pre></td></tr></table></figure>
 <p>torrc</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">ControlPort 9051</span><br><span class="line">HashedControlPassword 16:876313025F85703C60CD9BCDFA1AE88349D9C67D23C97B6754649ADD05</span><br><span class="line"></span><br><span class="line">StrictNodes  1</span><br><span class="line"><span class="comment">#ExcludeNodes  &#123;cn&#125;,&#123;hk&#125;,&#123;mo&#125;</span></span><br><span class="line"><span class="comment">#ExitNodes &#123;jp&#125;,&#123;tw&#125;,&#123;sg&#125;,&#123;my&#125;</span></span><br><span class="line">ExitNodes &#123;at&#125;,&#123;jp&#125;,&#123;tw&#125;,&#123;sg&#125;,&#123;my&#125;</span><br></pre></td></tr></table></figure>
 
 
 
 <p>start.sh</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/sh</span></span><br><span class="line">/etc/init.d/cron start</span><br><span class="line">/etc/init.d/ssh start</span><br><span class="line">/etc/init.d/tor start</span><br><span class="line"><span class="comment">#cd /backup/media/api/spiders/mitmproxy &amp;&amp; nohup sh run.sh &gt; /dev/null 2&gt;&amp;1 &amp;</span></span><br><span class="line"><span class="comment">#aria2c --conf ~/.aria2/aria2rpc.conf</span></span><br><span class="line">touch /var/<span class="built_in">log</span>/docker.log</span><br><span class="line">tail -f /var/<span class="built_in">log</span>/docker.log</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/sh</span></span><br><span class="line">service rsyslog start</span><br><span class="line">service ssh start</span><br><span class="line">service cron start</span><br><span class="line">service tor start</span><br><span class="line"></span><br><span class="line"><span class="comment">#su - jervis -c &quot;cd /backup/media/api/spiders/mitmproxy &amp;&amp; nohup sh run.sh &gt; /dev/null 2&gt;&amp;1 &amp;&quot;</span></span><br><span class="line"><span class="comment">#su - jervis -c &quot;aria2c -D --conf ~/.aria2/aria2rpc.conf&quot;</span></span><br><span class="line">touch /var/<span class="built_in">log</span>/docker.log</span><br><span class="line">tail -f /var/<span class="built_in">log</span>/docker.log</span><br></pre></td></tr></table></figure>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker build -t spideros .</span><br></pre></td></tr></table></figure>
 
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -d --restart always --name spiderDebian --hostname gingerOS --privileged --network macnet --ip=192.168.2.20  -v /volume3/backup:/backup -v /volume1/docker/spider-debian:/home/jervis -v /volume1/web:/web spideros</span><br></pre></td></tr></table></figure>
 
+<h4 id="一些问题"><a href="#一些问题" class="headerlink" title="一些问题"></a>一些问题</h4><ol>
+<li>某些服务无法重启动，比如service xxx stop无法停止：可能是无权限读取/proc内cwd, exe文件，docker用高权限(–privileged)启动即可;</li>
+</ol>
 <h4 id="后续完善"><a href="#后续完善" class="headerlink" title="后续完善"></a>后续完善</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">时区：</span><br><span class="line">dpkg-reconfigure tzdata</span><br><span class="line">编码：</span><br><span class="line">apt install locales &amp;&amp; dpkg-reconfigure locales</span><br></pre></td></tr></table></figure>
 
 <h4 id="修改已经存在的容器配置"><a href="#修改已经存在的容器配置" class="headerlink" title="修改已经存在的容器配置"></a>修改已经存在的容器配置</h4><p>先docker inspect 容器id，查看配置路径，比如修改hostname，可以执行</p>
