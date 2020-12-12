@@ -32,7 +32,7 @@
 <meta property="og:description" content="安装具体可以看：https:&#x2F;&#x2F;hexo.io&#x2F;zh-cn&#x2F;docs&#x2F;  安装node.js和npm  利用npm安装hexo 1npm install -g hexo-cli  创建博客目录，以blog目录为例 1hexo init blog">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-09-20T15:29:53.000Z">
-<meta property="article:modified_time" content="2020-09-23T05:29:29.358Z">
+<meta property="article:modified_time" content="2020-09-25T14:05:19.681Z">
 <meta property="article:author" content="Ginger">
 <meta property="article:tag" content="Hexo">
 <meta property="article:tag" content="Next">
@@ -145,17 +145,17 @@
   </li>
         <li class="menu-item menu-item-tags">
 
-    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">3</span></a>
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">6</span></a>
 
   </li>
         <li class="menu-item menu-item-categories">
 
-    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">1</span></a>
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">2</span></a>
 
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">2</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">4</span></a>
 
   </li>
         <li class="menu-item menu-item-rss">
@@ -235,20 +235,20 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">2</span>
+          <span class="site-state-item-count">4</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-count">2</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-count">6</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -328,7 +328,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2020-09-23 13:29:29" itemprop="dateModified" datetime="2020-09-23T13:29:29+08:00">2020-09-23</time>
+        <time title="修改时间：2020-09-25 22:05:19" itemprop="dateModified" datetime="2020-09-25T22:05:19+08:00">2020-09-25</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -394,10 +394,11 @@
 </li>
 <li><p>安装插件（包括上传github的，主题等等）</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#cd blog</span></span><br><span class="line">绘图类：<span class="comment">#npm install hexo-filter-mermaid-diagrams</span></span><br><span class="line">主题：<span class="comment">#git clone https://github.com/theme-next/hexo-theme-next themes/next</span></span><br><span class="line">上传github插件：<span class="comment">#npm install hexo-deployer-git</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">  </span><br><span class="line">- 配置主题支持mermaid绘图插件</span><br><span class="line">  </span><br><span class="line">  编辑next&#x2F;_config.yml</span><br><span class="line">  </span><br><span class="line">    &#96;&#96;&#96;yaml </span><br><span class="line">    # Mermaid tag</span><br><span class="line">    mermaid:</span><br><span class="line">      enable: true</span><br><span class="line">      # Available themes: default | dark | forest | neutral</span><br><span class="line">      theme: forest</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>用法</p>
-<p>靠标记符载入mermaid.js</p>
+<li><p>配置主题支持mermaid绘图插件<br>编辑next/_config.yml</p>
+  <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Mermaid tag</span></span><br><span class="line"><span class="attr">mermaid:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="comment"># Available themes: default | dark | forest | neutral</span></span><br><span class="line">  <span class="attr">theme:</span> <span class="string">forest</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>用法<br>靠标记符载入mermaid.js</p>
   <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;<span class="string">%</span> <span class="string">mermaid</span> <span class="string">type</span> <span class="string">%</span>&#125;</span><br><span class="line">&#123;<span class="string">%</span> <span class="string">endmermaid</span> <span class="string">%</span>&#125;</span><br><span class="line"></span><br><span class="line"><span class="attr">type :</span> <span class="string">type</span> <span class="string">of</span> <span class="string">the</span> <span class="string">mermaid</span> <span class="string">chart,</span> <span class="string">visit</span> <span class="string">https://github.com/mermaid-js/mermaid</span> <span class="string">for</span> <span class="string">more</span> <span class="string">information.</span></span><br></pre></td></tr></table></figure>
 
 <p>例子：</p>
@@ -410,8 +411,6 @@
 <ul>
 <li><p>各种命令</p>
   <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">生成新博文：hexo n <span class="string">&quot;博文标题&quot;</span></span><br><span class="line">生成静态页面：hexo g</span><br><span class="line">开启本地服务：hexo s --debug</span><br><span class="line">上传github：hexo d</span><br></pre></td></tr></table></figure>
-
-
 
 </li>
 </ul>
@@ -436,12 +435,13 @@
 <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">title:</span> <span class="string">标签</span></span><br><span class="line"><span class="attr">date:</span> <span class="number">2019-04-24 15:40:24</span></span><br><span class="line"><span class="attr">type:</span> <span class="string">tags</span></span><br><span class="line"><span class="meta">---</span></span><br></pre></td></tr></table></figure>
 <p>给文章添加“tags”属性,打开需要添加标签的文章，为其添加tags属性。</p>
 <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">title:</span> <span class="string">Hexo</span> <span class="string">添加分类及标签</span></span><br><span class="line"><span class="attr">date:</span> <span class="number">2019-04-24 15:40:24</span></span><br><span class="line"><span class="attr">categories:</span> </span><br><span class="line">           <span class="bullet">-</span> <span class="string">Hexo</span></span><br><span class="line"><span class="attr">tags:</span></span><br><span class="line">           <span class="bullet">-</span> <span class="string">博客</span></span><br><span class="line"><span class="meta">---</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
 <h3 id="添加-RSS-订阅功能"><a href="#添加-RSS-订阅功能" class="headerlink" title="添加 RSS 订阅功能"></a>添加 RSS 订阅功能</h3><ul>
 <li>安装插件：<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-generator-feed</span><br></pre></td></tr></table></figure></li>
 <li>修改hexo的_config.yml，新增如下：<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#Feed Atom</span></span><br><span class="line"><span class="attr">feed:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">atom</span></span><br><span class="line">  <span class="attr">path:</span> <span class="string">atom.xml</span></span><br><span class="line">  <span class="attr">limit:</span> <span class="number">20</span></span><br></pre></td></tr></table></figure></li>
-<li>修改主题Rss相关，打开开关即可。</li>
-</ul>
-</li>
+<li>修改主题_config.yml的Rss相关配置，打开开关即可。</li>
 </ul>
 <h3 id="关于typora插入图片后hexo生成路径问题"><a href="#关于typora插入图片后hexo生成路径问题" class="headerlink" title="关于typora插入图片后hexo生成路径问题"></a>关于typora插入图片后hexo生成路径问题</h3><ul>
 <li>安装插件 hexo-image-link<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-image-link --save</span><br></pre></td></tr></table></figure></li>
@@ -453,7 +453,7 @@
 <ul>
 <li>youtube<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% youtube video<span class="emphasis">_id [type] [cookie] %&#125;</span></span><br></pre></td></tr></table></figure>
 例如:<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;% youtube lJIrF4YjHfQ %&#125;</span><br><span class="line">也可以插入播放列表</span><br><span class="line">&#123;% youtube PL9hW1uS6HUfscJ9DHkOSoOX45MjXduUxo &#x27;playlist&#x27; %&#125;</span><br></pre></td></tr></table></figure>
-例子见：<a href="/2020/09/23/hello-world/" title="Hello World">Hello World</a></li>
+例子见：<a href="#">Post not found: hello-world</a></li>
 </ul>
 
     </div>
@@ -501,10 +501,13 @@
 
           <div class="post-nav">
             <div class="post-nav-item">
+                <a href="/2020/09/20/%E5%85%B3%E4%BA%8E%E9%98%85%E8%AF%BB/" rel="prev" title="关于阅读（转载）">
+                  <i class="fa fa-chevron-left"></i> 关于阅读（转载）
+                </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2020/09/23/hello-world/" rel="next" title="Hello World">
-                  Hello World <i class="fa fa-chevron-right"></i>
+                <a href="/2020/09/23/hexo%E7%94%A8%E4%BE%8B/" rel="next" title="Hexo用例">
+                  Hexo用例 <i class="fa fa-chevron-right"></i>
                 </a>
             </div>
           </div>
@@ -570,13 +573,13 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="站点总字数">3k</span>
+    <span title="站点总字数">5k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">3 分钟</span>
+    <span title="站点阅读时长">5 分钟</span>
   </span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/pisces/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动

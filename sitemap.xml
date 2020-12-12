@@ -2,16 +2,30 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://bsdcpp.github.io/2020/09/20/Hexo-%E4%BD%BF%E7%94%A8%E5%A4%87%E5%BF%98/</loc>
+    <loc>https://bsdcpp.github.io/2020/09/23/hexo%E7%94%A8%E4%BE%8B/</loc>
     
-    <lastmod>2020-09-23</lastmod>
+    <lastmod>2020-09-25</lastmod>
     
   </url>
   
   <url>
-    <loc>https://bsdcpp.github.io/2020/09/23/hello-world/</loc>
+    <loc>https://bsdcpp.github.io/2020/09/20/Hexo-%E4%BD%BF%E7%94%A8%E5%A4%87%E5%BF%98/</loc>
     
-    <lastmod>2020-09-23</lastmod>
+    <lastmod>2020-09-25</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://bsdcpp.github.io/2020/08/30/MacOS%E4%BD%BF%E7%94%A8%E8%AE%B0%E5%BD%95/</loc>
+    
+    <lastmod>2020-09-25</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://bsdcpp.github.io/2020/09/20/%E5%85%B3%E4%BA%8E%E9%98%85%E8%AF%BB/</loc>
+    
+    <lastmod>2020-09-24</lastmod>
     
   </url>
   
@@ -39,7 +53,7 @@
 
   <url>
     <loc>https://bsdcpp.github.io/</loc>
-    <lastmod>2020-09-23</lastmod>
+    <lastmod>2020-09-25</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -47,21 +61,42 @@
   
   <url>
     <loc>https://bsdcpp.github.io/tags/Hexo/</loc>
-    <lastmod>2020-09-23</lastmod>
+    <lastmod>2020-09-25</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://bsdcpp.github.io/tags/Next/</loc>
-    <lastmod>2020-09-23</lastmod>
+    <lastmod>2020-09-25</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://bsdcpp.github.io/tags/Mac/</loc>
+    <lastmod>2020-09-25</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://bsdcpp.github.io/tags/MacOS/</loc>
+    <lastmod>2020-09-25</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://bsdcpp.github.io/tags/hexo/</loc>
-    <lastmod>2020-09-23</lastmod>
+    <lastmod>2020-09-25</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://bsdcpp.github.io/tags/%E9%98%85%E8%AF%BB/</loc>
+    <lastmod>2020-09-25</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
@@ -70,7 +105,14 @@
   
   <url>
     <loc>https://bsdcpp.github.io/categories/Hexo/</loc>
-    <lastmod>2020-09-23</lastmod>
+    <lastmod>2020-09-25</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://bsdcpp.github.io/categories/Mac/</loc>
+    <lastmod>2020-09-25</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>

@@ -17,10 +17,11 @@
 </li>
 <li><p>安装插件（包括上传github的，主题等等）</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">#cd blog</span></span><br><span class="line">绘图类：<span class="comment">#npm install hexo-filter-mermaid-diagrams</span></span><br><span class="line">主题：<span class="comment">#git clone https://github.com/theme-next/hexo-theme-next themes/next</span></span><br><span class="line">上传github插件：<span class="comment">#npm install hexo-deployer-git</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">  </span><br><span class="line">- 配置主题支持mermaid绘图插件</span><br><span class="line">  </span><br><span class="line">  编辑next&#x2F;_config.yml</span><br><span class="line">  </span><br><span class="line">    &#96;&#96;&#96;yaml </span><br><span class="line">    # Mermaid tag</span><br><span class="line">    mermaid:</span><br><span class="line">      enable: true</span><br><span class="line">      # Available themes: default | dark | forest | neutral</span><br><span class="line">      theme: forest</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>用法</p>
-<p>靠标记符载入mermaid.js</p>
+<li><p>配置主题支持mermaid绘图插件<br>编辑next/_config.yml</p>
+  <figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Mermaid tag</span></span><br><span class="line"><span class="attr">mermaid:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="comment"># Available themes: default | dark | forest | neutral</span></span><br><span class="line">  <span class="attr">theme:</span> <span class="string">forest</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>用法<br>靠标记符载入mermaid.js</p>
   <figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line">&#123;<span class="string">%</span> <span class="string">mermaid</span> <span class="string">type</span> <span class="string">%</span>&#125;</span><br><span class="line">&#123;<span class="string">%</span> <span class="string">endmermaid</span> <span class="string">%</span>&#125;</span><br><span class="line"></span><br><span class="line"><span class="attr">type :</span> <span class="string">type</span> <span class="string">of</span> <span class="string">the</span> <span class="string">mermaid</span> <span class="string">chart,</span> <span class="string">visit</span> <span class="string">https://github.com/mermaid-js/mermaid</span> <span class="string">for</span> <span class="string">more</span> <span class="string">information.</span></span><br></pre></td></tr></table></figure>
 
 <p>例子：</p>
@@ -33,8 +34,6 @@
 <ul>
 <li><p>各种命令</p>
   <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">生成新博文：hexo n <span class="string">&quot;博文标题&quot;</span></span><br><span class="line">生成静态页面：hexo g</span><br><span class="line">开启本地服务：hexo s --debug</span><br><span class="line">上传github：hexo d</span><br></pre></td></tr></table></figure>
-
-
 
 </li>
 </ul>
@@ -59,12 +58,13 @@
 <figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">title:</span> <span class="string">标签</span></span><br><span class="line"><span class="attr">date:</span> <span class="number">2019-04-24 15:40:24</span></span><br><span class="line"><span class="attr">type:</span> <span class="string">tags</span></span><br><span class="line"><span class="meta">---</span></span><br></pre></td></tr></table></figure>
 <p>给文章添加“tags”属性,打开需要添加标签的文章，为其添加tags属性。</p>
 <figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">title:</span> <span class="string">Hexo</span> <span class="string">添加分类及标签</span></span><br><span class="line"><span class="attr">date:</span> <span class="number">2019-04-24 15:40:24</span></span><br><span class="line"><span class="attr">categories:</span> </span><br><span class="line">           <span class="bullet">-</span> <span class="string">Hexo</span></span><br><span class="line"><span class="attr">tags:</span></span><br><span class="line">           <span class="bullet">-</span> <span class="string">博客</span></span><br><span class="line"><span class="meta">---</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
 <h3 id="添加-RSS-订阅功能"><a href="#添加-RSS-订阅功能" class="headerlink" title="添加 RSS 订阅功能"></a>添加 RSS 订阅功能</h3><ul>
 <li>安装插件：<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm install hexo-generator-feed</span><br></pre></td></tr></table></figure></li>
 <li>修改hexo的_config.yml，新增如下：<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment">#Feed Atom</span></span><br><span class="line"><span class="attr">feed:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">atom</span></span><br><span class="line">  <span class="attr">path:</span> <span class="string">atom.xml</span></span><br><span class="line">  <span class="attr">limit:</span> <span class="number">20</span></span><br></pre></td></tr></table></figure></li>
-<li>修改主题Rss相关，打开开关即可。</li>
-</ul>
-</li>
+<li>修改主题_config.yml的Rss相关配置，打开开关即可。</li>
 </ul>
 <h3 id="关于typora插入图片后hexo生成路径问题"><a href="#关于typora插入图片后hexo生成路径问题" class="headerlink" title="关于typora插入图片后hexo生成路径问题"></a>关于typora插入图片后hexo生成路径问题</h3><ul>
 <li>安装插件 hexo-image-link<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-image-link --save</span><br></pre></td></tr></table></figure></li>
@@ -76,7 +76,7 @@
 <ul>
 <li>youtube<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% youtube video<span class="emphasis">_id [type] [cookie] %&#125;</span></span><br></pre></td></tr></table></figure>
 例如:<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% youtube lJIrF4YjHfQ %&#125;</span><br><span class="line">也可以插入播放列表</span><br><span class="line">&#123;% youtube PL9hW1uS6HUfscJ9DHkOSoOX45MjXduUxo &#x27;playlist&#x27; %&#125;</span><br></pre></td></tr></table></figure>
-例子见：<a href="/2020/09/23/hello-world/" title="Hello World">Hello World</a></li>
+例子见：<a href="#">Post not found: hello-world</a></li>
 </ul>
 ]]></content>
       <categories>
@@ -88,23 +88,74 @@
       </tags>
   </entry>
   <entry>
-    <title>Hello World</title>
-    <url>/2020/09/23/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+    <title>MacOS使用记录</title>
+    <url>/2020/08/30/MacOS%E4%BD%BF%E7%94%A8%E8%AE%B0%E5%BD%95/</url>
+    <content><![CDATA[<h3 id="控制发热"><a href="#控制发热" class="headerlink" title="控制发热"></a>控制发热</h3><h4 id="双显卡策略"><a href="#双显卡策略" class="headerlink" title="双显卡策略"></a>双显卡策略</h4><ul>
+<li>强制电池电源时使用核显(集成显卡)<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo pmset -b GPUSwitch 0</span><br></pre></td></tr></table></figure></li>
+<li>在插电时根据应用需求调用独立显卡<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo pmset -c GPUSwitch 2</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+</li>
+</ul>
 <a id="more"></a>
 
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<h4 id="禁止睿频"><a href="#禁止睿频" class="headerlink" title="禁止睿频"></a>禁止睿频</h4><ul>
+<li>安装turbo boost，创建一个脚本runtbs，内容：<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo /Applications/Turbo\ Boost\ Switcher.app/Contents/MacOS/Turbo\ Boost\ Switcher</span><br></pre></td></tr></table></figure></li>
+<li>然后赋予suid权限（即让普通用户可以启动）：<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo chmod 4711 runtbs</span><br></pre></td></tr></table></figure></li>
+<li>监控命令：<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo powermetrics</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="MUMU安卓模拟器连接问题"><a href="#MUMU安卓模拟器连接问题" class="headerlink" title="MUMU安卓模拟器连接问题"></a>MUMU安卓模拟器连接问题</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">1、打开mumu模拟器</span><br><span class="line">2、依次执行以下命令</span><br><span class="line">$ adb kill-server</span><br><span class="line">$ adb start-server</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+
+
+<h3 id="2k显示屏开启HIDPI"><a href="#2k显示屏开启HIDPI" class="headerlink" title="2k显示屏开启HIDPI"></a>2k显示屏开启HIDPI</h3><ul>
+<li><p>关闭SIP</p>
+<p>开机前按住command+r，直到logo出现松手，用终端输入csrutil disable，然后重启（可以用csrutil status检查一下</p>
+</li>
+</ul>
+<p>使用一键脚本：<a href="https://github.com/xzhih/one-key-hidpi">https://github.com/xzhih/one-key-hidpi</a></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ ioreg -l | grep <span class="string">&quot;DisplayVendorID&quot;</span></span><br><span class="line">  ioreg -l | grep <span class="string">&quot;DisplayProductID&quot;</span></span><br><span class="line">    | |   |           | | |         <span class="string">&quot;DisplayVendorID&quot;</span> = 1552   (macbook)</span><br><span class="line">    | |   |           | | | |       <span class="string">&quot;DisplayVendorID&quot;</span> = 4268     </span><br><span class="line">    | |   |           | | |         <span class="string">&quot;DisplayProductID&quot;</span> = 41028 (macbook)</span><br><span class="line">    | |   |           | | | |       <span class="string">&quot;DisplayProductID&quot;</span> = 53362</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="其他使用技巧"><a href="#其他使用技巧" class="headerlink" title="其他使用技巧"></a>其他使用技巧</h3><h4 id="输入法技巧"><a href="#输入法技巧" class="headerlink" title="输入法技巧"></a>输入法技巧</h4><ul>
+<li><p>切换输入法：control + 空格</p>
+</li>
+<li><p>翻页选词：可以不使用上下箭头，用[和]分别代替上翻和下翻；</p>
+</li>
+<li><p>拆字：比如要输入“淼”，可以先输入三个水：“水水水”，然后按shift+space即可调出拆字；</p>
+</li>
+<li><p>中英文、数字一次性混合输入：按住shift输入大写字母，按住option输入数字，练习这段文字：“C区7栋10楼D号房”；</p>
+</li>
+<li><p>输入声调：要在输入法设置里启用英文的“ABC扩展”，然后切换至该输入法，输入方法是option + aev<del>，后者a、e、v、</del>分别表示四声。输入的时候先输入声调，然后键入字母。练习：wǒ shì yí gè zhōng guó rén</p>
+</li>
+<li><p>拼音间隔：在元音之间加引号；</p>
+</li>
+<li><p>emoji：command + control + 空格。😂🤣🦊🚚🛵📷6️⃣🇮🇲👨‍👩‍👦☞➥</p>
+</li>
+</ul>
+<h4 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h4><ul>
+<li>在程序间切换：command + tab，如果此时释放tab按住Q可以退出相应选中程序；</li>
+<li>在本程序多窗口间切换：command + ~；</li>
+<li>强制退出进程：command + option + esc；</li>
+</ul>
+]]></content>
+      <categories>
+        <category>Mac</category>
+      </categories>
+      <tags>
+        <tag>Mac</tag>
+        <tag>MacOS</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo用例</title>
+    <url>/2020/09/23/hexo%E7%94%A8%E4%BE%8B/</url>
+    <content><![CDATA[<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<a id="more"></a>
+
 <pre class="mermaid">graph TD
 A[Hard] -->|Text| B(Round)
 B --> C{Decision}
@@ -168,7 +219,7 @@ B --> E[(数据库咯)]</pre>
 李雷 ->> 韩梅梅: Hello 梅梅, How are you?
 Note right of 韩梅梅: 韩梅梅心想
 韩梅梅 -->> 李雷: I'm fine, thanks, and you?</pre>
-<h3 id="插入图片和视频"><a href="#插入图片和视频" class="headerlink" title="插入图片和视频"></a>插入图片和视频</h3><img src="/2020/09/23/hello-world/AATXAJxGuKHSLR85PjmoVFasD759vl6uiK7CY2LCj1MYpQ=s176-c-k-c0xffffffff-no-nd-rj.jpeg" class="" title="img">
+<h3 id="插入图片和视频"><a href="#插入图片和视频" class="headerlink" title="插入图片和视频"></a>插入图片和视频</h3>
 
 <div class="video-container"><iframe src="https://www.youtube.com/embed/U1eQfA3fXa4" frameborder="0" loading="lazy" allowfullscreen></iframe></div>
 ]]></content>
@@ -177,6 +228,38 @@ Note right of 韩梅梅: 韩梅梅心想
       </categories>
       <tags>
         <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>关于阅读（转载）</title>
+    <url>/2020/09/20/%E5%85%B3%E4%BA%8E%E9%98%85%E8%AF%BB/</url>
+    <content><![CDATA[<p><a href="https://mp.weixin.qq.com/s?__biz=MzI4NjMwNzU4OA==&mid=2247493372&idx=1&sn=9791b764cf4c9a2608716a39fe6cae68&chksm=ebdc4297dcabcb819219025e587a8ecf69efd61acb4e67e28a2b021e37bfe1fc7168655f052f&mpshare=1&scene=23&srcid=0919C6pT7zv6c0mEKhIbNvqq&sharer_sharetime=1600523057480&sharer_shareid=2493c0d635f685369899b4f3b0d7aac5%23rd">原文链接</a></p>
+<h2 id="反复默写VS大量阅读"><a href="#反复默写VS大量阅读" class="headerlink" title="反复默写VS大量阅读"></a>反复默写VS大量阅读</h2><p>原创 高子阳 第一语文 <em>前天</em></p>
+<p>为什么要默写？</p>
+<p>是为了考试，为了高分，为了记住，还是为了素养？</p>
+<p>对于一个班学生来说，为什么第一遍默写总是那几个同学全对，或者只有一点点小问题？为什么绝大多数同学要反反复复默写，还是难以全对？那些词，那些古诗文，那些段落到底怎么了？</p>
+<a id="more"></a>
+
+<p>研究默写，必须研究学生，研究学生的差异。其实，这一研究不难。那些第一遍默写就能全对或者只有一点点小问题的同学，早已经行走在“多读多写”的大道上了。也就是说，一个早已经爱上读写的学生，是不需要反反复复默写的。而研究那些反反复复还对不了的同学，几乎都不爱读爱写。</p>
+<p>不得不说，反反复复地默写、订正，太伤害人了。多少学生，因为这种重复而讨厌语文。而这种默写得来的高分（仅仅限于小学），并不能确定是语文学习高手。看中高考语文成绩，这些年全国各地又有多少地方平均及格过？如此大量默写为何得不到应有的合格？</p>
+<p>这其实就是我国多年中小学语文学习存在的问题——全国中小学生整体读书量太少，写作能力整体不行。</p>
+<p>我在多次讲座中讲一张图、一组数据。</p>
+<p>这张图是：</p>
+<img src="/2020/09/20/%E5%85%B3%E4%BA%8E%E9%98%85%E8%AF%BB/640-20200920214423649.jpeg" class="" title="img">
+
+<p>每天小于一分钟读书，一年读8000个词；每天读4.6分钟，一年365天，认识词汇量达了282000个；每天读20分钟，其一年阅读量居然达到180万词。我国九年义务教育400万字的阅读量，也就是一天读4.8分钟。看这张图，把班级学生分为三类，哪类学生默写能做到一次全对，其实是非常明确的。我国绝大多数中小学生因为读书量不大，只在4.8分钟，所以想一次性默写好那是挺难的。</p>
+<p>再来看看第二张表：</p>
+<img src="/2020/09/20/%E5%85%B3%E4%BA%8E%E9%98%85%E8%AF%BB/640-20200920214423663.jpeg" class="" title="img">
+
+<p>看看这张表，考50分的同学，每天读书4.6分钟，一年阅读词数是282000；考60分的同学，每天读书6.5分钟，一年阅读词数是432000；考90分的同学，每天读书21.1分钟，一年阅读词数1823000；考98分的同学，每天读书65分钟，一年阅读词数4358000。我国九年阅读量400万字，也就是处在每天读书4.6-6.5分之间，我国中高考多年语文整体平均分达不到及格，从这张表中可以找到原因。</p>
+<p>大量默写能增加词汇量吗？每个学期，重来重去默写的那些词，就是二三百个字，一年也就五六百字，加上背诵课文的，一年很难超过1000个。这样的默写，怎么可能换来中高考的高分？如果说有效果，仅限于小学。因为小学的试卷是以考课本为主。有人会说，小学是基础，如果小学都不重视默写，中学语文质量会更差。持这种观点的人，肯定是懂教育教学规律的人，也不值得与这类人争辩。其实0-12岁的教育，大量阅读更为重要。</p>
+<p>2012年，美国开始实施的全国性的教育大纲《各州共同核心标准》，该标准规定美国小学毕业生至少需要阅读1404本课外读物，阅读量占到全部K12年级阅读量的77.6%；美国《加州公立学校阅读/语言艺术大纲（K12）》规定小学一二年级用在阅读的时间是每天150分钟（在校）+（在家30或45分钟），这是全美最高标准。</p>
+<p>我们现在所用的统编本教材，快乐读书吧六年才44本书！走进我们的中小学，看看课表上，有阅读课程吗？没有！看看课程表，4.8分钟的阅读都没有列在课程表上！这44本书，还有很多很多学生没有读的！</p>
+<p>面对着默写，我们的思考视角该转变了。我们的语文教育教学如果能重视大量阅读，每天让孩子读1个小时书，那种死记硬背式的默写当然可以取消。取消了，语文成绩不仅不会降低，反而会大面积的提高。</p>
+<p>当下，谁又会相信这一理论呢？因为佐藤学说：“他三十几年来，每周至少两天深入学校，扎根中小学实地观察。目前，他已到过全国3500多所学校，听了1万多节课。在学校改革中他遭遇许许多多次失败，从而认识到学校改革必须要从内而外进行改革，才能获得教育行政、政府、家长等的认可。因为家长是顽固，教师是顽固，学生是顽固的，校长更是顽固，教育主管部门就不要说了。一切都充满挑战！”这段话适合我们吗？有待研究。</p>
+]]></content>
+      <tags>
+        <tag>阅读</tag>
       </tags>
   </entry>
 </search>
