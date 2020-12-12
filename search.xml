@@ -354,51 +354,6 @@ Note right of 韩梅梅: 韩梅梅心想
       </tags>
   </entry>
   <entry>
-    <title></title>
-    <url>/2020/12/10/Pie%20Charts/</url>
-    <content><![CDATA[<h2 id="Pie-Charts"><a href="#Pie-Charts" class="headerlink" title="Pie Charts"></a>Pie Charts</h2><pre class="mermaid">pie
-    title Pie Chart
-    "Dogs" : 386
-    "Cats" : 85
-    "Rats" : 150</pre>
-
-<pre class="mermaid">gantt
-        dateFormat  YYYY-MM-DD
-        title 快乐的生活
-        section 吃一把鸡就学习
-        学习            :done,    des1, 2014-01-06,2014-01-09
-        疯狂学习               :active,  des2, 2014-01-09, 3d
-        继续疯狂学习               :         des3, after des2, 5d
-        吃鸡！               :         des4, after des3, 4d
-        section 具体内容
-        学习Python :crit, done, 2014-01-06,72h
-        学习C++          :crit, done, after des1, 2d
-        学习Lisp             :crit, active, 3d
-        学习图形学        :crit, 4d
-        跳伞           :2d
-        打枪                      :2d</pre>]]></content>
-  </entry>
-  <entry>
-    <title></title>
-    <url>/2020/09/29/leetcode/</url>
-    <content><![CDATA[<p>Hi 这期视频分享了我觉得新手刷题需要注意的几个tips~<br>希望对你有所帮助！喜欢的话不要忘记给我点赞哦~</p>
-<p>🔗链接区<br>视频中提到的：</p>
-<p>刷题目录<br><a href="https://github.com/CyC2018/CS-Notes/b">https://github.com/CyC2018/CS-Notes/b</a>…</p>
-<p>推荐的学习频道👍🏻<br>Youtube ：Back To Back SWE<br><a href="https://www.youtube.com/channel/UCmJz">https://www.youtube.com/channel/UCmJz</a>…</p>
-<p>B站：</p>
-<ol>
-<li>花花酱<br><a href="https://space.bilibili.com/9880352?fr">https://space.bilibili.com/9880352?fr</a>…</li>
-<li>小Q刷题<br><a href="https://space.bilibili.com/149758?fro">https://space.bilibili.com/149758?fro</a>…</li>
-<li>绵羊教授<br><a href="https://space.bilibili.com/354892788">https://space.bilibili.com/354892788</a>?…</li>
-</ol>
-<hr>
-<p>💜微博: Christinaaa呀 <a href="https://weibo.com/u/2678129590">https://weibo.com/u/2678129590</a><br>🧡B站: Christinaaa呀 <a href="https://space.bilibili.com/300173531">https://space.bilibili.com/300173531</a><br>💛Instegram : christinaaaya  <a href="http://sina.lt/gpvN">http://sina.lt/gpvN</a></p>
-<p>📪Business Inquiries：<a href="mailto:&#104;&#x65;&#x6c;&#x6c;&#x6f;&#46;&#x63;&#x68;&#114;&#x69;&#x73;&#116;&#x69;&#x6e;&#97;&#97;&#97;&#x79;&#97;&#x40;&#103;&#109;&#x61;&#105;&#108;&#x2e;&#99;&#111;&#x6d;">&#104;&#x65;&#x6c;&#x6c;&#x6f;&#46;&#x63;&#x68;&#114;&#x69;&#x73;&#116;&#x69;&#x6e;&#97;&#97;&#97;&#x79;&#97;&#x40;&#103;&#109;&#x61;&#105;&#108;&#x2e;&#99;&#111;&#x6d;</a></p>
-<hr>
-<p>🎵BGM<br>secret crates - Springtime Stroll<br>Jerry Folk - To My Soul</p>
-]]></content>
-  </entry>
-  <entry>
     <title>vim使用技巧</title>
     <url>/2020/10/02/vim%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/</url>
     <content><![CDATA[<h4 id="vim中delete（backspace）键不能向左删除"><a href="#vim中delete（backspace）键不能向左删除" class="headerlink" title="vim中delete（backspace）键不能向左删除"></a>vim中delete（backspace）键不能向左删除</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">VIM使用了 compatible 模式，或者把 backspace 变量设置为空了…其实compatible模式是VIM为了兼容vi而出现的配置，它的作用是使VIM的操作行为和规范和vi一致，而这种模式下backspace配置是空的。即意味着backspace无法删除 indent ， end of line ， start 这三种字符。</span><br></pre></td></tr></table></figure>
