@@ -32,7 +32,7 @@
 <meta property="og:description" content="控制发热双显卡策略 强制电池电源时使用核显(集成显卡)1sudo pmset -b GPUSwitch 0 在插电时根据应用需求调用独立显卡1sudo pmset -c GPUSwitch 2">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-08-30T07:54:05.443Z">
-<meta property="article:modified_time" content="2020-09-25T08:32:04.643Z">
+<meta property="article:modified_time" content="2020-12-12T05:14:10.308Z">
 <meta property="article:author" content="Ginger">
 <meta property="article:tag" content="Mac">
 <meta property="article:tag" content="MacOS">
@@ -145,17 +145,17 @@
   </li>
         <li class="menu-item menu-item-tags">
 
-    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">6</span></a>
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">10</span></a>
 
   </li>
         <li class="menu-item menu-item-categories">
 
-    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">2</span></a>
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">6</span></a>
 
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">4</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">10</span></a>
 
   </li>
         <li class="menu-item menu-item-rss">
@@ -219,7 +219,7 @@
 
       <!--noindex-->
       <section class="post-toc-wrap sidebar-panel">
-          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8E%A7%E5%88%B6%E5%8F%91%E7%83%AD"><span class="nav-number">1.</span> <span class="nav-text">控制发热</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8F%8C%E6%98%BE%E5%8D%A1%E7%AD%96%E7%95%A5"><span class="nav-number">1.1.</span> <span class="nav-text">双显卡策略</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%A6%81%E6%AD%A2%E7%9D%BF%E9%A2%91"><span class="nav-number">1.2.</span> <span class="nav-text">禁止睿频</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#MUMU%E5%AE%89%E5%8D%93%E6%A8%A1%E6%8B%9F%E5%99%A8%E8%BF%9E%E6%8E%A5%E9%97%AE%E9%A2%98"><span class="nav-number">2.</span> <span class="nav-text">MUMU安卓模拟器连接问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2k%E6%98%BE%E7%A4%BA%E5%B1%8F%E5%BC%80%E5%90%AFHIDPI"><span class="nav-number">3.</span> <span class="nav-text">2k显示屏开启HIDPI</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B6%E4%BB%96%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7"><span class="nav-number">4.</span> <span class="nav-text">其他使用技巧</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BE%93%E5%85%A5%E6%B3%95%E6%8A%80%E5%B7%A7"><span class="nav-number">4.1.</span> <span class="nav-text">输入法技巧</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%BF%AB%E6%8D%B7%E9%94%AE"><span class="nav-number">4.2.</span> <span class="nav-text">快捷键</span></a></li></ol></li></ol></div>
+          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8E%A7%E5%88%B6%E5%8F%91%E7%83%AD"><span class="nav-number">1.</span> <span class="nav-text">控制发热</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8F%8C%E6%98%BE%E5%8D%A1%E7%AD%96%E7%95%A5"><span class="nav-number">1.1.</span> <span class="nav-text">双显卡策略</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%A6%81%E6%AD%A2%E7%9D%BF%E9%A2%91"><span class="nav-number">1.2.</span> <span class="nav-text">禁止睿频</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#MUMU%E5%AE%89%E5%8D%93%E6%A8%A1%E6%8B%9F%E5%99%A8%E8%BF%9E%E6%8E%A5%E9%97%AE%E9%A2%98"><span class="nav-number">2.</span> <span class="nav-text">MUMU安卓模拟器连接问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#PD%E8%99%9A%E6%8B%9F%E6%9C%BA"><span class="nav-number">3.</span> <span class="nav-text">PD虚拟机</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#python%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE"><span class="nav-number">4.</span> <span class="nav-text">python环境配置</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#python-virtual"><span class="nav-number">4.1.</span> <span class="nav-text">python virtual</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#MacVim%E5%AE%89%E8%A3%85%E4%BA%8E%E9%85%8D%E7%BD%AE"><span class="nav-number">5.</span> <span class="nav-text">MacVim安装于配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2k%E6%98%BE%E7%A4%BA%E5%B1%8F%E5%BC%80%E5%90%AFHIDPI"><span class="nav-number">6.</span> <span class="nav-text">2k显示屏开启HIDPI</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B6%E4%BB%96%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7"><span class="nav-number">7.</span> <span class="nav-text">其他使用技巧</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BE%93%E5%85%A5%E6%B3%95%E6%8A%80%E5%B7%A7"><span class="nav-number">7.1.</span> <span class="nav-text">输入法技巧</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%BF%AB%E6%8D%B7%E9%94%AE"><span class="nav-number">7.2.</span> <span class="nav-text">快捷键</span></a></li></ol></li></ol></div>
       </section>
       <!--/noindex-->
 
@@ -235,20 +235,20 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">4</span>
+          <span class="site-state-item-count">10</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-count">6</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-count">10</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -328,7 +328,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2020-09-25 16:32:04" itemprop="dateModified" datetime="2020-09-25T16:32:04+08:00">2020-09-25</time>
+        <time title="修改时间：2020-12-12 13:14:10" itemprop="dateModified" datetime="2020-12-12T13:14:10+08:00">2020-12-12</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -362,14 +362,14 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>1.2k</span>
+      <span>3.8k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
+      <span>3 分钟</span>
     </span>
 </div>
 
@@ -396,10 +396,27 @@
 
 </li>
 </ul>
-<h3 id="MUMU安卓模拟器连接问题"><a href="#MUMU安卓模拟器连接问题" class="headerlink" title="MUMU安卓模拟器连接问题"></a>MUMU安卓模拟器连接问题</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">1、打开mumu模拟器</span><br><span class="line">2、依次执行以下命令</span><br><span class="line">$ adb kill-server</span><br><span class="line">$ adb start-server</span><br></pre></td></tr></table></figure>
+<h3 id="MUMU安卓模拟器连接问题"><a href="#MUMU安卓模拟器连接问题" class="headerlink" title="MUMU安卓模拟器连接问题"></a>MUMU安卓模拟器连接问题</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">1.连接模拟器终端</span><br><span class="line">windows和mac不一样:</span><br><span class="line">【win版】</span><br><span class="line">adb connect 127.0.0.1:7555</span><br><span class="line">adb shell</span><br><span class="line">【mac版】</span><br><span class="line">adb kill-server &amp;&amp; adb server &amp;&amp; adb shell</span><br><span class="line"></span><br><span class="line">3.frida脱壳</span><br><span class="line">  a.到模拟器执行frida-server (https://github.com/frida/frida/releases)</span><br><span class="line">    传输server文件到模拟器：adb -s emulator-5554 push frida-server-12.11.14-android-x86 /data/</span><br><span class="line">  b.https://github.com/hluwa/FRIDA-DEXDump</span><br><span class="line">    安装：pip3 install frida-dexdump</span><br><span class="line">    执行：先在模拟器里运行需要脱壳的app，然后在主机执行frida-dexdump</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="PD虚拟机"><a href="#PD虚拟机" class="headerlink" title="PD虚拟机"></a>PD虚拟机</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">首先安装新版本 16.0.1(48919)，https://www.inpandora.com/parallels-desktop-13-3.html</span><br><span class="line">然后终端执行：sudo -b /Applications/Parallels\ Desktop.app/Contents/MacOS/prl_client_app</span><br></pre></td></tr></table></figure>
+
+<h3 id="python环境配置"><a href="#python环境配置" class="headerlink" title="python环境配置"></a>python环境配置</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">export</span> LDFLAGS=<span class="string">&quot;-L/usr/local/opt/bzip2/lib -L/usr/local/opt/zlib/lib -L/usr/local/opt/sqlite/lib&quot;</span></span><br><span class="line"><span class="built_in">export</span> CPPFLAGS=<span class="string">&quot;-I/usr/local/opt/bzip2/include -I/usr/local/opt/zlib/include -I/usr/local/opt/sqlite/include&quot;</span></span><br><span class="line"><span class="built_in">export</span> PYTHON_CONFIGURE_OPTS=<span class="string">&quot;--enable-framework&quot;</span></span><br><span class="line"></span><br><span class="line">pyenv install 3.8.6</span><br><span class="line">⚠️注意一个问题：/private/tmp的权限问题，可以sudo chown一下。</span><br></pre></td></tr></table></figure>
+
+<p>更多配置教程：<br><a target="_blank" rel="noopener" href="https://opensource.com/article/19/6/python-virtual-environments-mac">https://opensource.com/article/19/6/python-virtual-environments-mac</a><br><a target="_blank" rel="noopener" href="https://opensource.com/article/20/4/pyenv">https://opensource.com/article/20/4/pyenv</a><br><a target="_blank" rel="noopener" href="https://opensource.com/article/19/5/python-3-default-mac">https://opensource.com/article/19/5/python-3-default-mac</a></p>
+<h4 id="python-virtual"><a href="#python-virtual" class="headerlink" title="python virtual"></a>python virtual</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">$ pyenv global 3.7.3</span><br><span class="line">$ $(pyenv <span class="built_in">which</span> python3) -m pip install virtualenvwrapper</span><br><span class="line"></span><br><span class="line">$ mkvirtualenv test1</span><br><span class="line">$ mkvirtualenv test2</span><br><span class="line"></span><br><span class="line">$ mkdir -p ~/src/pyfun &amp;&amp; <span class="built_in">cd</span> ~/src/pyfun</span><br><span class="line">$ mkvirtualenv $(basename $(<span class="built_in">pwd</span>))</span><br><span class="line"><span class="comment"># we will see the environment initialize</span></span><br><span class="line">(pyfun)$ workon</span><br><span class="line">pyfun</span><br><span class="line">test1</span><br><span class="line">test2</span><br><span class="line">(pyfun)$ deactivate</span><br><span class="line">$</span><br><span class="line">$ <span class="built_in">cd</span> ~/src/pyfun</span><br><span class="line">(pyfun)$ workon .</span><br><span class="line"></span><br><span class="line">$ <span class="built_in">cd</span> ~/src/pyfun</span><br><span class="line">$ rmvirtualenv $(basename $(<span class="built_in">pwd</span>))</span><br><span class="line">$ mkvirtualenv $(basename $(<span class="built_in">pwd</span>))</span><br></pre></td></tr></table></figure>
 
 
 
+<h3 id="MacVim安装于配置"><a href="#MacVim安装于配置" class="headerlink" title="MacVim安装于配置"></a>MacVim安装于配置</h3><p>Brew cask编译好的macvim依赖于brew的<a href="mailto:&#x70;&#x79;&#116;&#x68;&#111;&#110;&#x40;&#x33;&#46;&#x39;">&#x70;&#x79;&#116;&#x68;&#111;&#110;&#x40;&#x33;&#46;&#x39;</a>，所以需要修改编译参数：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ brew tap macvim-dev/macvim</span><br><span class="line">$ brew edit macvim-dev/macvim/macvim</span><br></pre></td></tr></table></figure>
+
+<p>需要把配置文件里依赖python3的路径修改为你pyenv的路径：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># ENV.append &#x27;vi_cv_path_python3&#x27;, &quot;#&#123;HOMEBREW_PREFIX&#125;/bin/python3&quot;</span></span><br><span class="line"><span class="comment"># ENV.append &#x27;vi_cv_dll_name_python3&#x27;, &quot;#&#123;HOMEBREW_PREFIX&#125;/Frameworks/Python.framework/Versions/3.5/Python&quot;</span></span><br><span class="line"></span><br><span class="line">ENV.append <span class="string">&#x27;vi_cv_path_python3&#x27;</span>, <span class="string">&quot;/users/&lt;user name&gt;/. Pyenv/Versions/3.5.1/Bin/Python3&quot;</span></span><br><span class="line">ENV.append <span class="string">&#x27;vi_cv_dll_name_python3&#x27;</span>, <span class="string">&quot;/users/&lt;user name&gt;/. pyenv/versions/3.5.1/lib/libpython3.5m.dylib&quot;</span></span><br></pre></td></tr></table></figure>
+<p>然后安装：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install --HEAD --with-properly-linked-python2-python3 macvim-dev/macvim/macvim</span><br></pre></td></tr></table></figure>
+
+<p>⚠️最近big sur编译的时候有bug，导致make失败 <a target="_blank" rel="noopener" href="https://github.com/macvim-dev/homebrew-macvim/issues/16">https://github.com/macvim-dev/homebrew-macvim/issues/16</a></p>
+<p>可以brew edit的时候修改system ‘make’为system ‘sleep 120’，趁它休息的时候手动去目录make（手动可以成功），然后在brew跳过了make就成功了。               </p>
 <h3 id="2k显示屏开启HIDPI"><a href="#2k显示屏开启HIDPI" class="headerlink" title="2k显示屏开启HIDPI"></a>2k显示屏开启HIDPI</h3><ul>
 <li><p>关闭SIP</p>
 <p>开机前按住command+r，直到logo出现松手，用终端输入csrutil disable，然后重启（可以用csrutil status检查一下</p>
@@ -410,7 +427,8 @@
 
 
 
-<h3 id="其他使用技巧"><a href="#其他使用技巧" class="headerlink" title="其他使用技巧"></a>其他使用技巧</h3><h4 id="输入法技巧"><a href="#输入法技巧" class="headerlink" title="输入法技巧"></a>输入法技巧</h4><ul>
+<h3 id="其他使用技巧"><a href="#其他使用技巧" class="headerlink" title="其他使用技巧"></a>其他使用技巧</h3><h4 id="输入法技巧"><a href="#输入法技巧" class="headerlink" title="输入法技巧"></a>输入法技巧</h4><p>详见官网：<a target="_blank" rel="noopener" href="https://support.apple.com/zh-cn/guide/chinese-input-method/welcome/mac">https://support.apple.com/zh-cn/guide/chinese-input-method/welcome/mac</a></p>
+<ul>
 <li><p>切换输入法：control + 空格</p>
 </li>
 <li><p>翻页选词：可以不使用上下箭头，用[和]分别代替上翻和下翻；</p>
@@ -419,13 +437,54 @@
 </li>
 <li><p>中英文、数字一次性混合输入：按住shift输入大写字母，按住option输入数字，练习这段文字：“C区7栋10楼D号房”；</p>
 </li>
-<li><p>输入声调：要在输入法设置里启用英文的“ABC扩展”，然后切换至该输入法，输入方法是option + aev<del>，后者a、e、v、</del>分别表示四声。输入的时候先输入声调，然后键入字母。练习：wǒ shì yí gè zhōng guó rén</p>
+<li><p>输入声调：</p>
+<ul>
+<li>在英文输入法状态下，<strong>长按字母</strong>，会显示带拼音的字母选项，可以试试；</li>
+<li>要在输入法设置里启用英文的“ABC扩展”，然后切换至该输入法，输入方法是option + aev<del>，后者a、e、v、</del>分别表示四声。输入的时候先输入声调，然后键入字母。练习：wǒ shì yí gè zhōng guó rén。</li>
+</ul>
 </li>
 <li><p>拼音间隔：在元音之间加引号；</p>
 </li>
 <li><p>emoji：command + control + 空格。😂🤣🦊🚚🛵📷6️⃣🇮🇲👨‍👩‍👦☞➥</p>
 </li>
+<li><p>查找输入码<br>「查找输入码」功能简直就是一个学习拼音、五笔型、笔画的小帮手。你随便输入一组汉字，能看到每个字对应的拼音、五笔型、笔画以及拆字规则。点击输入法图标，选择「查找输入码」，或按「Option+Shift+L」即可打开输入码搜索框。</p>
+</li>
+<li><p>在 App 中，使用前缀键 (u)，键入字符（前面无需空格）的笔画输入码。例如，您可以键入以下内容：</p>
+</li>
 </ul>
+<table>
+<thead>
+<tr>
+<th align="left">拼音中的笔画</th>
+<th align="left">键盘按键</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">一</td>
+<td align="left">H</td>
+</tr>
+<tr>
+<td align="left">丨</td>
+<td align="left">S</td>
+</tr>
+<tr>
+<td align="left">丿</td>
+<td align="left">P</td>
+</tr>
+<tr>
+<td align="left">丶(乀)</td>
+<td align="left">N</td>
+</tr>
+<tr>
+<td align="left">乛(乙)</td>
+<td align="left">Z</td>
+</tr>
+<tr>
+<td align="left">*通配符</td>
+<td align="left">X</td>
+</tr>
+</tbody></table>
+<p>  如果键入“unnzzsh”，则“字”会作为第一个候选字。</p>
 <h4 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h4><ul>
 <li>在程序间切换：command + tab，如果此时释放tab按住Q可以退出相应选中程序；</li>
 <li>在本程序多窗口间切换：command + ~；</li>
@@ -546,13 +605,13 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="站点总字数">5k</span>
+    <span title="站点总字数">22k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">5 分钟</span>
+    <span title="站点阅读时长">20 分钟</span>
   </span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/pisces/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
