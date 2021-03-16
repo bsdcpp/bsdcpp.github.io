@@ -1124,10 +1124,11 @@ Note right of 韩梅梅: 韩梅梅心想
 <h4 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h4><p>虚拟化相关参照资料：<br><a href="http://cromwell-intl.com/linux/virtualization.html">http://cromwell-intl.com/linux/virtualization.html</a><br><a href="https://wiki.debian.org/SystemVirtualization">https://wiki.debian.org/SystemVirtualization</a><br><a href="https://libvirt.org/formatdomain.html#elementsDisks">https://libvirt.org/formatdomain.html#elementsDisks</a></p>
 ]]></content>
       <categories>
-        <category>-chroot</category>
+        <category>chroot</category>
       </categories>
       <tags>
-        <tag>-Synology -chroot</tag>
+        <tag>Synology</tag>
+        <tag>chroot</tag>
       </tags>
   </entry>
   <entry>
