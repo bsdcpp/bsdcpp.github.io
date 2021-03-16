@@ -197,13 +197,12 @@
   <entry>
     <title>Hexo用例</title>
     <url>/2020/09/23/hexo%E7%94%A8%E4%BE%8B/</url>
-    <content><![CDATA[<a id="more"></a>
-
-<pre class="mermaid">graph TD
+    <content><![CDATA[<pre class="mermaid">graph TD
 A[Hard] -->|Text| B(Round)
 B --> C{Decision}
 C -->|One| D[Result 1]
 C -->|Two| E[Result 2]</pre>
+<a id="more"></a>
 
 <pre class="mermaid">graph TD
 A[闹钟响起] --> B(与床板分离)

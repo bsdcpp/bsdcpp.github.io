@@ -176,21 +176,16 @@
     <link href="https://bsdcpp.github.io/2020/09/23/hexo%E7%94%A8%E4%BE%8B/"/>
     <id>https://bsdcpp.github.io/2020/09/23/hexo%E7%94%A8%E4%BE%8B/</id>
     <published>2020-09-23T05:23:18.359Z</published>
-    <updated>2020-09-25T14:08:22.069Z</updated>
+    <updated>2021-03-16T01:55:23.250Z</updated>
     
-    <content type="html"><![CDATA[<a id="more"></a><pre class="mermaid">graph TDA[Hard] -->|Text| B(Round)B --> C{Decision}C -->|One| D[Result 1]C -->|Two| E[Result 2]</pre><pre class="mermaid">graph TDA[闹钟响起] --> B(与床板分离)B --> C{分离成功?}C --> |yes| D[快乐的一天]C --> |no| BB --> E[(数据库咯)]</pre><pre class="mermaid">pie    title Key elements in Product X    "Calcium" : 42.96    "Potassium" : 50.05    "Magnesium" : 10.01    "Iron" :  5</pre><pre class="mermaid">classDiagram      Animal <|-- Duck      Animal <|-- Fish      Animal <|-- Zebra      Animal : +int age      Animal : +String gender      Animal: +isMammal()      Animal: +mate()      class Duck{          +String beakColor          +swim()          +quack()      }      class Fish{          -int sizeInFeet          -canEat()      }      class Zebra{          +bool is_wild          +run()      }</pre><pre class="mermaid">gantt        dateFormat  YYYY-MM-DD        title 快乐的生活        section 吃一把鸡就学习        学习            :done,    des1, 2014-01-06,2014-01-09        疯狂学习               :active,  des2, 2014-01-09, 3d        继续疯狂学习               :         des3, after des2, 5d        吃鸡！               :         des4, after des3, 4d        section 具体内容        学习Python :crit, done, 2014-01-06,72h        学习C++          :crit, done, after des1, 2d        学习Lisp             :crit, active, 3d        学习图形学        :crit, 4d        跳伞           :2d        打枪                      :2d</pre><pre class="mermaid">sequenceDiagram李雷 ->> 韩梅梅: Hello 梅梅, How are you?Note right of 韩梅梅: 韩梅梅心想韩梅梅 -->> 李雷: I'm fine, thanks, and you?</pre><h3 id="插入图片和视频"><a href="#插入图片和视频" class="headerlink" title="插入图片和视频"></a>插入图片和视频</h3><div class="video-container"><iframe src="https://www.youtube.com/embed/U1eQfA3fXa4" frameborder="0" loading="lazy" allowfullscreen></iframe></div>]]></content>
+    <content type="html"><![CDATA[<pre class="mermaid">graph TDA[Hard] -->|Text| B(Round)B --> C{Decision}C -->|One| D[Result 1]C -->|Two| E[Result 2]</pre><a id="more"></a><pre class="mermaid">graph TDA[闹钟响起] --> B(与床板分离)B --> C{分离成功?}C --> |yes| D[快乐的一天]C --> |no| BB --> E[(数据库咯)]</pre><pre class="mermaid">pie    title Key elements in Product X    "Calcium" : 42.96    "Potassium" : 50.05    "Magnesium" : 10.01    "Iron" :  5</pre><pre class="mermaid">classDiagram      Animal <|-- Duck      Animal <|-- Fish      Animal <|-- Zebra      Animal : +int age      Animal : +String gender      Animal: +isMammal()      Animal: +mate()      class Duck{          +String beakColor          +swim()          +quack()      }      class Fish{          -int sizeInFeet          -canEat()      }      class Zebra{          +bool is_wild          +run()      }</pre><pre class="mermaid">gantt        dateFormat  YYYY-MM-DD        title 快乐的生活        section 吃一把鸡就学习        学习            :done,    des1, 2014-01-06,2014-01-09        疯狂学习               :active,  des2, 2014-01-09, 3d        继续疯狂学习               :         des3, after des2, 5d        吃鸡！               :         des4, after des3, 4d        section 具体内容        学习Python :crit, done, 2014-01-06,72h        学习C++          :crit, done, after des1, 2d        学习Lisp             :crit, active, 3d        学习图形学        :crit, 4d        跳伞           :2d        打枪                      :2d</pre><pre class="mermaid">sequenceDiagram李雷 ->> 韩梅梅: Hello 梅梅, How are you?Note right of 韩梅梅: 韩梅梅心想韩梅梅 -->> 李雷: I'm fine, thanks, and you?</pre><h3 id="插入图片和视频"><a href="#插入图片和视频" class="headerlink" title="插入图片和视频"></a>插入图片和视频</h3><div class="video-container"><iframe src="https://www.youtube.com/embed/U1eQfA3fXa4" frameborder="0" loading="lazy" allowfullscreen></iframe></div>]]></content>
     
     
-      
-      
-    <summary type="html">&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
-
-&lt;pre class=&quot;mermaid&quot;&gt;graph TD
+    <summary type="html">&lt;pre class=&quot;mermaid&quot;&gt;graph TD
 A[Hard] --&gt;|Text| B(Round)
 B --&gt; C{Decision}
 C --&gt;|One| D[Result 1]
-C --&gt;|Two| E[Result 2]&lt;</summary>
-      
+C --&gt;|Two| E[Result 2]&lt;/pre&gt;</summary>
     
     
     
