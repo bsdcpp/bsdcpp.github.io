@@ -27,7 +27,7 @@
   <meta name="description" content="记录，备忘。">
 <meta property="og:type" content="website">
 <meta property="og:title" content="杂记">
-<meta property="og:url" content="https://bsdcpp.github.io/tags/hexo/index.html">
+<meta property="og:url" content="https://bsdcpp.github.io/page/2/index.html">
 <meta property="og:site_name" content="杂记">
 <meta property="og:description" content="记录，备忘。">
 <meta property="og:locale" content="zh_CN">
@@ -36,20 +36,20 @@
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="https://bsdcpp.github.io/tags/hexo/">
+<link rel="canonical" href="https://bsdcpp.github.io/page/2/">
 
 
 <script class="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome : false,
+    isHome : true,
     isPost : false,
     lang   : 'zh-CN'
   };
 </script>
 
-  <title>标签: hexo | 杂记</title>
+  <title>杂记</title>
   
 
 
@@ -291,54 +291,137 @@
 </noscript>
 
 
-    <div class="main-inner tag posts-collapse">
+    <div class="main-inner index posts-expand">
       
 
       
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN,en,default">
+    <link itemprop="mainEntityOfPage" href="https://bsdcpp.github.io/2020/08/30/MacOS%E4%BD%BF%E7%94%A8%E8%AE%B0%E5%BD%95/">
 
-  
-  
-  
-  <div class="post-block">
-    <div class="post-content">
-      <div class="collection-title">
-        <h2 class="collection-header">hexo
-          <small>标签</small>
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://avatars2.githubusercontent.com/u/1034557?s=460&u=23c1c651a48e0222a121e5b11048f94340f9b89b&v=4">
+      <meta itemprop="name" content="Ginger">
+      <meta itemprop="description" content="记录，备忘。">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="杂记">
+    </span>
+
+    
+    
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/08/30/MacOS%E4%BD%BF%E7%94%A8%E8%AE%B0%E5%BD%95/" class="post-title-link" itemprop="url">MacOS使用记录</a>
         </h2>
-      </div>
 
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2020-08-30 15:54:05" itemprop="dateCreated datePublished" datetime="2020-08-30T15:54:05+08:00">2020-08-30</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-03-16 09:42:39" itemprop="dateModified" datetime="2021-03-16T09:42:39+08:00">2021-03-16</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Mac/" itemprop="url" rel="index"><span itemprop="name">Mac</span></a>
+        </span>
+    </span>
+
+  
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus：</span>
+    
+    <a title="disqus" href="/2020/08/30/MacOS%E4%BD%BF%E7%94%A8%E8%AE%B0%E5%BD%95/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2020/08/30/MacOS使用记录/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>2k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>2 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h3 id="控制发热"><a href="#控制发热" class="headerlink" title="控制发热"></a>控制发热</h3><h4 id="双显卡策略"><a href="#双显卡策略" class="headerlink" title="双显卡策略"></a>双显卡策略</h4><ul>
+<li>强制电池电源时使用核显(集成显卡)<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo pmset -b GPUSwitch 0</span><br></pre></td></tr></table></figure></li>
+<li>在插电时根据应用需求调用独立显卡<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo pmset -c GPUSwitch 2</span><br></pre></td></tr></table></figure>
+
+
+</li>
+</ul>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2020/08/30/MacOS%E4%BD%BF%E7%94%A8%E8%AE%B0%E5%BD%95/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
-    <div class="collection-year">
-      <span class="collection-header">2020</span>
     </div>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2020-09-23T13:23:18+08:00"
-              content="2020-09-23">
-          09-23
-        </time>
-      </div>
+    
+    
+    
 
-      <div class="post-title">
-          <a class="post-title-link" href="/2020/09/23/hexo%E7%94%A8%E4%BE%8B/" itemprop="url">
-            <span itemprop="name">Hexo用例</span>
-          </a>
-      </div>
-
+    <footer class="post-footer">
+        <div class="post-eof"></div>
       
-    </header>
+    </footer>
   </article>
-
-    </div>
-  </div>
   
   
   
 
+
   
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+  </nav>
 
 
 
@@ -465,10 +548,6 @@ if (document.querySelectorAll('.mermaid').length) {
   // defer loading until the whole page loading is completed
   window.addEventListener('load', loadCount, false);
 </script>
-
-</body>
-</html>
-/script>
 
 </body>
 </html>

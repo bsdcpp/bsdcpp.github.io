@@ -32,7 +32,7 @@
 <meta property="og:description" content="python环境配置一个系统多个python版本的管理，日常使用如何做到不污染系统python。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2021-03-16T01:41:48.000Z">
-<meta property="article:modified_time" content="2021-03-16T01:52:55.051Z">
+<meta property="article:modified_time" content="2021-03-28T04:00:48.510Z">
 <meta property="article:author" content="Ginger">
 <meta property="article:tag" content="vim">
 <meta name="twitter:card" content="summary">
@@ -149,12 +149,12 @@
   </li>
         <li class="menu-item menu-item-categories">
 
-    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">8</span></a>
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">9</span></a>
 
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">10</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">11</span></a>
 
   </li>
         <li class="menu-item menu-item-rss">
@@ -234,14 +234,14 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">10</span>
+          <span class="site-state-item-count">11</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-count">9</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
@@ -329,10 +329,16 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
-      
 
-      <time title="创建时间：2021-03-16 09:41:48 / 修改时间：09:52:55" itemprop="dateCreated datePublished" datetime="2021-03-16T09:41:48+08:00">2021-03-16</time>
+      <time title="创建时间：2021-03-16 09:41:48" itemprop="dateCreated datePublished" datetime="2021-03-16T09:41:48+08:00">2021-03-16</time>
     </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-03-28 12:00:48" itemprop="dateModified" datetime="2021-03-28T12:00:48+08:00">2021-03-28</time>
+      </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-folder"></i>
@@ -386,7 +392,7 @@
         <h3 id="python环境配置"><a href="#python环境配置" class="headerlink" title="python环境配置"></a>python环境配置</h3><p>一个系统多个python版本的管理，日常使用如何做到不污染系统python。</p>
 <a id="more"></a>
 
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">export</span> LDFLAGS=<span class="string">&quot;-L/usr/local/opt/bzip2/lib -L/usr/local/opt/zlib/lib -L/usr/local/opt/sqlite/lib&quot;</span></span><br><span class="line"><span class="built_in">export</span> CPPFLAGS=<span class="string">&quot;-I/usr/local/opt/bzip2/include -I/usr/local/opt/zlib/include -I/usr/local/opt/sqlite/include&quot;</span></span><br><span class="line"><span class="built_in">export</span> PYTHON_CONFIGURE_OPTS=<span class="string">&quot;--enable-framework&quot;</span></span><br><span class="line">linux用：env PYTHON_CONFIGURE_OPTS=<span class="string">&quot;--enable-shared&quot;</span> pyenv install</span><br><span class="line"></span><br><span class="line">pyenv install 3.8.6</span><br><span class="line">⚠️注意一个问题：/private/tmp的权限问题，可以sudo chown一下。</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">export</span> LDFLAGS=<span class="string">&quot;-L/usr/local/opt/bzip2/lib -L/usr/local/opt/zlib/lib -L/usr/local/opt/sqlite/lib&quot;</span></span><br><span class="line"><span class="built_in">export</span> CPPFLAGS=<span class="string">&quot;-I/usr/local/opt/bzip2/include -I/usr/local/opt/zlib/include -I/usr/local/opt/sqlite/include&quot;</span></span><br><span class="line"><span class="built_in">export</span> PYTHON_CONFIGURE_OPTS=<span class="string">&quot;--enable-framework&quot;</span>  //需要加入tkinter： --with-tcl-tk</span><br><span class="line">linux用：env PYTHON_CONFIGURE_OPTS=<span class="string">&quot;--enable-shared&quot;</span> pyenv install</span><br><span class="line"></span><br><span class="line">pyenv install 3.8.6</span><br><span class="line">⚠️注意一个问题：/private/tmp的权限问题，可以sudo chown一下。</span><br></pre></td></tr></table></figure>
 
 <p>更多配置教程：<br><a target="_blank" rel="noopener" href="https://opensource.com/article/19/6/python-virtual-environments-mac">https://opensource.com/article/19/6/python-virtual-environments-mac</a><br><a target="_blank" rel="noopener" href="https://opensource.com/article/20/4/pyenv">https://opensource.com/article/20/4/pyenv</a><br><a target="_blank" rel="noopener" href="https://opensource.com/article/19/5/python-3-default-mac">https://opensource.com/article/19/5/python-3-default-mac</a></p>
 <h4 id="python-virtual"><a href="#python-virtual" class="headerlink" title="python virtual"></a>python virtual</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">$ pyenv global 3.7.3</span><br><span class="line">$ $(pyenv <span class="built_in">which</span> python) -m pip install virtualenvwrapper</span><br><span class="line"></span><br><span class="line">$ mkvirtualenv test1</span><br><span class="line">$ mkvirtualenv test2</span><br><span class="line"></span><br><span class="line">$ mkdir -p ~/src/pyfun &amp;&amp; <span class="built_in">cd</span> ~/src/pyfun</span><br><span class="line">$ mkvirtualenv $(basename $(<span class="built_in">pwd</span>))</span><br><span class="line"><span class="comment"># we will see the environment initialize</span></span><br><span class="line">(pyfun)$ workon</span><br><span class="line">pyfun</span><br><span class="line">test1</span><br><span class="line">test2</span><br><span class="line">(pyfun)$ deactivate</span><br><span class="line">$</span><br><span class="line">$ <span class="built_in">cd</span> ~/src/pyfun</span><br><span class="line">(pyfun)$ workon .</span><br><span class="line"></span><br><span class="line">$ <span class="built_in">cd</span> ~/src/pyfun</span><br><span class="line">$ rmvirtualenv $(basename $(<span class="built_in">pwd</span>))</span><br><span class="line">$ mkvirtualenv $(basename $(<span class="built_in">pwd</span>))</span><br></pre></td></tr></table></figure>
@@ -402,7 +408,7 @@
 <h5 id="所有命令"><a href="#所有命令" class="headerlink" title="所有命令"></a>所有命令</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line">$ pyenv commands</span><br><span class="line">activate</span><br><span class="line">commands</span><br><span class="line">completions</span><br><span class="line">deactivate</span><br><span class="line">doctor</span><br><span class="line"><span class="built_in">exec</span></span><br><span class="line">global</span><br><span class="line"><span class="built_in">help</span></span><br><span class="line">hooks</span><br><span class="line">init</span><br><span class="line">install</span><br><span class="line">installer</span><br><span class="line"><span class="built_in">local</span></span><br><span class="line">offline-installer</span><br><span class="line">prefix</span><br><span class="line"><span class="built_in">rehash</span></span><br><span class="line">root</span><br><span class="line">shell</span><br><span class="line">shims</span><br><span class="line">uninstall</span><br><span class="line">update                 <span class="comment"># 更新 pyenv 及插件</span></span><br><span class="line">version</span><br><span class="line">--version</span><br><span class="line">version-file</span><br><span class="line">version-file-read</span><br><span class="line">version-file-write</span><br><span class="line">version-name</span><br><span class="line">version-origin</span><br><span class="line">versions</span><br><span class="line">virtualenv</span><br><span class="line">virtualenv-delete</span><br><span class="line">virtualenv-init</span><br><span class="line">virtualenv-prefix</span><br><span class="line">virtualenvs</span><br><span class="line"><span class="built_in">whence</span></span><br><span class="line"><span class="built_in">which</span></span><br></pre></td></tr></table></figure>
 
 <p><a target="_blank" rel="noopener" href="http://einverne.github.io/post/2017/04/pyenv.html">http://einverne.github.io/post/2017/04/pyenv.html</a></p>
-<h3 id="MacVim安装于配置"><a href="#MacVim安装于配置" class="headerlink" title="MacVim安装于配置"></a>MacVim安装于配置</h3><p>Brew cask编译好的macvim依赖于brew的<a href="mailto:&#112;&#x79;&#x74;&#104;&#x6f;&#x6e;&#x40;&#51;&#x2e;&#x39;">&#112;&#x79;&#x74;&#104;&#x6f;&#x6e;&#x40;&#51;&#x2e;&#x39;</a>，所以需要修改编译参数：</p>
+<h3 id="MacVim安装于配置"><a href="#MacVim安装于配置" class="headerlink" title="MacVim安装于配置"></a>MacVim安装于配置</h3><p>Brew cask编译好的macvim依赖于brew的<a href="mailto:&#112;&#121;&#116;&#104;&#111;&#x6e;&#x40;&#x33;&#46;&#57;">&#112;&#121;&#116;&#104;&#111;&#x6e;&#x40;&#x33;&#46;&#57;</a>，所以需要修改编译参数：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ brew tap macvim-dev/macvim</span><br><span class="line">$ brew edit macvim-dev/macvim/macvim</span><br></pre></td></tr></table></figure>
 
 <p>需要把配置文件里依赖python3的路径修改为你pyenv的路径：</p>
@@ -463,6 +469,9 @@
                 </a>
             </div>
             <div class="post-nav-item">
+                <a href="/2021/04/04/Linux-%E4%B8%8B%E6%B8%85%E7%A9%BA%E6%88%96%E5%88%A0%E9%99%A4%E5%A4%A7%E6%96%87%E4%BB%B6-%E5%A4%A7%E9%87%8F%E6%96%87%E4%BB%B6%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E6%B3%95/" rel="next" title="Linux 下清空或删除大文件/大量文件的几种方法">
+                  Linux 下清空或删除大文件/大量文件的几种方法 <i class="fa fa-chevron-right"></i>
+                </a>
             </div>
           </div>
     </footer>
@@ -527,13 +536,13 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="站点总字数">29k</span>
+    <span title="站点总字数">31k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">26 分钟</span>
+    <span title="站点阅读时长">28 分钟</span>
   </span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/pisces/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
