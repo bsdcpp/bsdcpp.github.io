@@ -332,7 +332,7 @@ Note right of 韩梅梅: 韩梅梅心想
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker inspect 容器id | grep -i hostname</span><br></pre></td></tr></table></figure>
 
 <p>取得容器目录，进入目录，修改config.v2.json，然后记得重启docker服务就会生效。</p>
-]]></content>
+<h5 id="static-IP设置，群晖需要手动修改config-v2-json"><a href="#static-IP设置，群晖需要手动修改config-v2-json" class="headerlink" title="static IP设置，群晖需要手动修改config.v2.json"></a>static IP设置，群晖需要手动修改config.v2.json</h5><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="string">&quot;Networks&quot;</span>: &#123;</span><br><span class="line">                <span class="string">&quot;macnet&quot;</span>: &#123;</span><br><span class="line">                    <span class="string">&quot;IPAMConfig&quot;</span>: &#123;</span><br><span class="line">                        <span class="string">&quot;IPv4Address&quot;</span>: <span class="string">&quot;192.168.2.132&quot;</span></span><br><span class="line">                    &#125;,</span><br></pre></td></tr></table></figure>]]></content>
       <categories>
         <category>docker</category>
       </categories>
