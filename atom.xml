@@ -58,26 +58,6 @@
   
   <entry>
     <title></title>
-    <link href="https://bsdcpp.github.io/2021/06/17/git%E4%BD%BF%E7%94%A8/"/>
-    <id>https://bsdcpp.github.io/2021/06/17/git%E4%BD%BF%E7%94%A8/</id>
-    <published>2021-06-17T15:25:31.149Z</published>
-    <updated>2021-06-17T15:26:27.171Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="拜托，不要再问我Git如何回滚代码"><a href="#拜托，不要再问我Git如何回滚代码" class="headerlink" title="拜托，不要再问我Git如何回滚代码"></a>拜托，不要再问我Git如何回滚代码</h1><p>这个是Git学习的第5篇内容，今天我们来讲讲Git如何做代码回滚。</p><h2 id="代码回滚"><a href="#代码回滚" class="headerlink" title="代码回滚"></a>代码回滚</h2><p>不知道大家在平常开发时中没有犯过这样一个错误，就是把IDE的配置或者项目运行的本地配置文件上传到服务器，导致别人更新代码之后，出现本地项目无法运行情况。</p><p>这是常见需要做代码回滚的一个场景，提交了一些我们不希望的文件。</p><p>我们也可能会碰到，在一次产品上线之后，出现了紧急Bug，一时半会无法修复，为了保证线上稳定，需要做代码回滚。</p><p>时光不能回退，Git却允许我们改变历史。</p><p>想要让Git回退历史，有以下步骤：</p><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">使用git log命令，查看分支提交历史，确认需要回退的版本</span><br><span class="line">使用git reset --hard commit_id命令，进行版本回退</span><br><span class="line">使用git push origin命令，推送至远程分支</span><br></pre></td></tr></table></figure><p>快捷命令：</p><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">回退上个版本：git reset --hard HEAD^ </span><br></pre></td></tr></table></figure><p>【注：HEAD是指向当前版本的指针，HEAD^表示上个版本,HEAD^^表示上上个版本】</p><p>如果修改到的文件比较少，我们可以不通过命令回滚的方式，手动删除之前的修改，再进行提交。</p><h2 id="撤销修改"><a href="#撤销修改" class="headerlink" title="撤销修改"></a>撤销修改</h2><p>一些时候，为了验证Bug，我们可能会直接在测试服务器上打断点调试。如果忘记去掉调试内容，在执行git pull更新时，Git会提示你提交修改。</p><p>此时，你可能已经不记得修改什么了，这个时候，我们可以用git checkout – file命令，来清空工作区的修改。是的，git checkout命令不仅可以用来切换分支，还能撤销文件修改。</p><p>如果想要撤销提交到暂存区后的文件内容怎么办呢(即执行git add之后)，我们可以使用git reset HEAD file命令撤销提交到暂存区的内容,再使用git checkout – file命令来撤销工作区的修改，需要分两步进行操作。</p><h2 id="reset还是revert"><a href="#reset还是revert" class="headerlink" title="reset还是revert?"></a>reset还是revert?</h2><p>针对评论区提出的，回滚是使用reset还是revert的疑问，这边做下补充说明。</p><p>reset和revert都可以用来回滚代码。但他们是有区别的，准确来说，reset是用来”回退”版本，而revert是用来”还原”某次或者某几次提交。</p><p>听起来有点绕，怎么去理解他们呢？</p><p>举个例子，比如在master分支，有以下提交历史:</p><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">42eae13 (HEAD -&gt; master) 第四次修改</span><br><span class="line">97ea0f9 第三次修改</span><br><span class="line">e50b7c2 第二次修改</span><br><span class="line">3a52650 第一次修改</span><br></pre></td></tr></table></figure><p>可以看到，master最新版本为第四次修改。</p><p>如果发现，在第四次修改有错误，需要回滚到第三次修改，就可以用reset命令来回退。</p><p>执行 git reset –hard 97ea0f9,这个时候，git的提交历史变为:</p><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">97ea0f9 (HEAD -&gt; master) 第三次修改</span><br><span class="line">e50b7c2 第二次修改</span><br><span class="line">3a52650 第一次修改</span><br></pre></td></tr></table></figure><p>可以看到master当前指向97ea0f9这个版本，我们回到了第三次修改。</p><p>使用reset命令，Git会把要回退版本之后提交的修改都删除掉。要从第四次修改回退到第一次修改，那么会删除第二、三、四次的修改。【注：这里并不是真正的物理删除】</p><p>那如果发现第三次修改有错误，想要恢复第三次修改，却要保留第四次修改呢？</p><p>这个时候就可以用revert命令：</p><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git revert -n 97ea0f9</span><br><span class="line">git commit -m &quot;恢复第三次修改&quot;</span><br></pre></td></tr></table></figure><p>Git提交历史会变成：</p><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">33b8b30 (HEAD -&gt; master) Revert &quot;恢复第三次修改&quot;</span><br><span class="line">42eae13 第四次修改</span><br><span class="line">97ea0f9 第三次修改</span><br><span class="line">e50b7c2 第二次修改</span><br><span class="line">3a52650 第一次修改</span><br></pre></td></tr></table></figure><p>实际上，Git把第三次修改从提交中剔除(还原)了，还保留了第四次修改，并且产生了新的commit_id。</p><p>在实际生产环境中，代码是基于master分支发布到线上的，会有多人进行提交。可能会碰到自己或团队其他成员开发的某个功能在上线之后有Bug,需要及时做代码回滚的操作。</p><p>在确认要回滚的版本之后，如果别人没有最新提交，那么就可以直接用reset命令进行版本回退，否则，就可以考虑使用revert命令进行还原修改，不能影响到别人的提交。</p><p>使用reset还是revert，需要考虑实际的适用场景，没有绝对化。</p><p>上面提的<em>并不是真正的物理删除</em>，是因为Git会把分支的每次修改记录都会保留下来，比如有某次的commit,某次的reset等。而使用git reflog show命令,可以查看完整的提交历史，</p><p>只要有commit_id，我们就能恢复任意版本的代码，在各版本之间来回穿梭。</p><p>以上，就是我对Git回滚代码的一些使用心得，个人观点,仅供参考。</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;拜托，不要再问我Git如何回滚代码&quot;&gt;&lt;a href=&quot;#拜托，不要再问我Git如何回滚代码&quot; class=&quot;headerlink&quot; title=&quot;拜托，不要再问我Git如何回滚代码&quot;&gt;&lt;/a&gt;拜托，不要再问我Git如何回滚代码&lt;/h1&gt;&lt;p&gt;这个是Git学习的第</summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title></title>
     <link href="https://bsdcpp.github.io/2021/06/08/%E9%94%99%E9%A2%98%E9%9B%86/"/>
     <id>https://bsdcpp.github.io/2021/06/08/%E9%94%99%E9%A2%98%E9%9B%86/</id>
     <published>2021-06-08T08:44:40.816Z</published>
@@ -506,6 +486,31 @@ C --&gt;|Two| E[Result 2]&lt;/pre&gt;</summary>
     <category term="Hexo" scheme="https://bsdcpp.github.io/tags/Hexo/"/>
     
     <category term="Next" scheme="https://bsdcpp.github.io/tags/Next/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>拜托，不要再问我Git如何回滚代码</title>
+    <link href="https://bsdcpp.github.io/2020/09/20/git%E4%BD%BF%E7%94%A8/"/>
+    <id>https://bsdcpp.github.io/2020/09/20/git%E4%BD%BF%E7%94%A8/</id>
+    <published>2020-09-20T15:29:53.000Z</published>
+    <updated>2021-10-12T12:11:05.747Z</updated>
+    
+    <content type="html"><![CDATA[<p>这个是Git学习的第5篇内容，今天我们来讲讲Git如何做代码回滚。</p><h2 id="代码回滚"><a href="#代码回滚" class="headerlink" title="代码回滚"></a>代码回滚</h2><p>不知道大家在平常开发时中没有犯过这样一个错误，就是把IDE的配置或者项目运行的本地配置文件上传到服务器，导致别人更新代码之后，出现本地项目无法运行情况。</p><p>这是常见需要做代码回滚的一个场景，提交了一些我们不希望的文件。</p><p>我们也可能会碰到，在一次产品上线之后，出现了紧急Bug，一时半会无法修复，为了保证线上稳定，需要做代码回滚。</p><p>时光不能回退，Git却允许我们改变历史。</p><a id="more"></a><p>想要让Git回退历史，有以下步骤：</p><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">使用git log命令，查看分支提交历史，确认需要回退的版本</span><br><span class="line">使用git reset --hard commit_id命令，进行版本回退</span><br><span class="line">使用git push origin命令，推送至远程分支</span><br></pre></td></tr></table></figure><p>快捷命令：</p><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">回退上个版本：git reset --hard HEAD^ </span><br></pre></td></tr></table></figure><p>【注：HEAD是指向当前版本的指针，HEAD^表示上个版本,HEAD^^表示上上个版本】</p><p>如果修改到的文件比较少，我们可以不通过命令回滚的方式，手动删除之前的修改，再进行提交。</p><h2 id="撤销修改"><a href="#撤销修改" class="headerlink" title="撤销修改"></a>撤销修改</h2><p>一些时候，为了验证Bug，我们可能会直接在测试服务器上打断点调试。如果忘记去掉调试内容，在执行git pull更新时，Git会提示你提交修改。</p><p>此时，你可能已经不记得修改什么了，这个时候，我们可以用git checkout – file命令，来清空工作区的修改。是的，git checkout命令不仅可以用来切换分支，还能撤销文件修改。</p><p>如果想要撤销提交到暂存区后的文件内容怎么办呢(即执行git add之后)，我们可以使用git reset HEAD file命令撤销提交到暂存区的内容,再使用git checkout – file命令来撤销工作区的修改，需要分两步进行操作。</p><h2 id="reset还是revert"><a href="#reset还是revert" class="headerlink" title="reset还是revert?"></a>reset还是revert?</h2><p>针对评论区提出的，回滚是使用reset还是revert的疑问，这边做下补充说明。</p><p>reset和revert都可以用来回滚代码。但他们是有区别的，准确来说，reset是用来”回退”版本，而revert是用来”还原”某次或者某几次提交。</p><p>听起来有点绕，怎么去理解他们呢？</p><p>举个例子，比如在master分支，有以下提交历史:</p><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">42eae13 (HEAD -&gt; master) 第四次修改</span><br><span class="line">97ea0f9 第三次修改</span><br><span class="line">e50b7c2 第二次修改</span><br><span class="line">3a52650 第一次修改</span><br></pre></td></tr></table></figure><p>可以看到，master最新版本为第四次修改。</p><p>如果发现，在第四次修改有错误，需要回滚到第三次修改，就可以用reset命令来回退。</p><p>执行 git reset –hard 97ea0f9,这个时候，git的提交历史变为:</p><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">97ea0f9 (HEAD -&gt; master) 第三次修改</span><br><span class="line">e50b7c2 第二次修改</span><br><span class="line">3a52650 第一次修改</span><br></pre></td></tr></table></figure><p>可以看到master当前指向97ea0f9这个版本，我们回到了第三次修改。</p><p>使用reset命令，Git会把要回退版本之后提交的修改都删除掉。要从第四次修改回退到第一次修改，那么会删除第二、三、四次的修改。【注：这里并不是真正的物理删除】</p><p>那如果发现第三次修改有错误，想要恢复第三次修改，却要保留第四次修改呢？</p><p>这个时候就可以用revert命令：</p><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git revert -n 97ea0f9</span><br><span class="line">git commit -m &quot;恢复第三次修改&quot;</span><br></pre></td></tr></table></figure><p>Git提交历史会变成：</p><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">33b8b30 (HEAD -&gt; master) Revert &quot;恢复第三次修改&quot;</span><br><span class="line">42eae13 第四次修改</span><br><span class="line">97ea0f9 第三次修改</span><br><span class="line">e50b7c2 第二次修改</span><br><span class="line">3a52650 第一次修改</span><br></pre></td></tr></table></figure><p>实际上，Git把第三次修改从提交中剔除(还原)了，还保留了第四次修改，并且产生了新的commit_id。</p><p>在实际生产环境中，代码是基于master分支发布到线上的，会有多人进行提交。可能会碰到自己或团队其他成员开发的某个功能在上线之后有Bug,需要及时做代码回滚的操作。</p><p>在确认要回滚的版本之后，如果别人没有最新提交，那么就可以直接用reset命令进行版本回退，否则，就可以考虑使用revert命令进行还原修改，不能影响到别人的提交。</p><p>使用reset还是revert，需要考虑实际的适用场景，没有绝对化。</p><p>上面提的<em>并不是真正的物理删除</em>，是因为Git会把分支的每次修改记录都会保留下来，比如有某次的commit,某次的reset等。而使用git reflog show命令,可以查看完整的提交历史，</p><p>只要有commit_id，我们就能恢复任意版本的代码，在各版本之间来回穿梭。</p><p>以上，就是我对Git回滚代码的一些使用心得，个人观点,仅供参考。</p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;这个是Git学习的第5篇内容，今天我们来讲讲Git如何做代码回滚。&lt;/p&gt;
+&lt;h2 id=&quot;代码回滚&quot;&gt;&lt;a href=&quot;#代码回滚&quot; class=&quot;headerlink&quot; title=&quot;代码回滚&quot;&gt;&lt;/a&gt;代码回滚&lt;/h2&gt;&lt;p&gt;不知道大家在平常开发时中没有犯过这样一个错误，就是把IDE的配置或者项目运行的本地配置文件上传到服务器，导致别人更新代码之后，出现本地项目无法运行情况。&lt;/p&gt;
+&lt;p&gt;这是常见需要做代码回滚的一个场景，提交了一些我们不希望的文件。&lt;/p&gt;
+&lt;p&gt;我们也可能会碰到，在一次产品上线之后，出现了紧急Bug，一时半会无法修复，为了保证线上稳定，需要做代码回滚。&lt;/p&gt;
+&lt;p&gt;时光不能回退，Git却允许我们改变历史。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="git" scheme="https://bsdcpp.github.io/categories/git/"/>
+    
+    
+    <category term="git" scheme="https://bsdcpp.github.io/tags/git/"/>
     
   </entry>
   

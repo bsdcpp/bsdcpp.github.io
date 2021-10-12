@@ -1484,13 +1484,15 @@ Note right of 韩梅梅: 韩梅梅心想
       </categories>
   </entry>
   <entry>
-    <title></title>
-    <url>/2021/06/17/git%E4%BD%BF%E7%94%A8/</url>
-    <content><![CDATA[<h1 id="拜托，不要再问我Git如何回滚代码"><a href="#拜托，不要再问我Git如何回滚代码" class="headerlink" title="拜托，不要再问我Git如何回滚代码"></a>拜托，不要再问我Git如何回滚代码</h1><p>这个是Git学习的第5篇内容，今天我们来讲讲Git如何做代码回滚。</p>
+    <title>拜托，不要再问我Git如何回滚代码</title>
+    <url>/2020/09/20/git%E4%BD%BF%E7%94%A8/</url>
+    <content><![CDATA[<p>这个是Git学习的第5篇内容，今天我们来讲讲Git如何做代码回滚。</p>
 <h2 id="代码回滚"><a href="#代码回滚" class="headerlink" title="代码回滚"></a>代码回滚</h2><p>不知道大家在平常开发时中没有犯过这样一个错误，就是把IDE的配置或者项目运行的本地配置文件上传到服务器，导致别人更新代码之后，出现本地项目无法运行情况。</p>
 <p>这是常见需要做代码回滚的一个场景，提交了一些我们不希望的文件。</p>
 <p>我们也可能会碰到，在一次产品上线之后，出现了紧急Bug，一时半会无法修复，为了保证线上稳定，需要做代码回滚。</p>
 <p>时光不能回退，Git却允许我们改变历史。</p>
+<a id="more"></a>
+
 <p>想要让Git回退历史，有以下步骤：</p>
 <figure class="highlight text"><table><tr><td class="code"><pre><span class="line">使用git log命令，查看分支提交历史，确认需要回退的版本</span><br><span class="line">使用git reset --hard commit_id命令，进行版本回退</span><br><span class="line">使用git push origin命令，推送至远程分支</span><br></pre></td></tr></table></figure>
 
@@ -1530,6 +1532,12 @@ Note right of 韩梅梅: 韩梅梅心想
 <p>只要有commit_id，我们就能恢复任意版本的代码，在各版本之间来回穿梭。</p>
 <p>以上，就是我对Git回滚代码的一些使用心得，个人观点,仅供参考。</p>
 ]]></content>
+      <categories>
+        <category>git</category>
+      </categories>
+      <tags>
+        <tag>git</tag>
+      </tags>
   </entry>
   <entry>
     <title>macos路由配置</title>
