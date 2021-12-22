@@ -32,7 +32,7 @@
 <meta property="og:description" content="python环境配置一个系统多个python版本的管理，日常使用如何做到不污染系统python。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2021-03-16T01:41:48.000Z">
-<meta property="article:modified_time" content="2021-05-24T09:17:17.051Z">
+<meta property="article:modified_time" content="2021-11-27T12:09:36.281Z">
 <meta property="article:author" content="Ginger">
 <meta property="article:tag" content="vim">
 <meta name="twitter:card" content="summary">
@@ -144,17 +144,17 @@
   </li>
         <li class="menu-item menu-item-tags">
 
-    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">16</span></a>
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">19</span></a>
 
   </li>
         <li class="menu-item menu-item-categories">
 
-    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">15</span></a>
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">16</span></a>
 
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">23</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">28</span></a>
 
   </li>
         <li class="menu-item menu-item-rss">
@@ -234,20 +234,20 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">23</span>
+          <span class="site-state-item-count">28</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">15</span>
+        <span class="site-state-item-count">16</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">16</span>
+        <span class="site-state-item-count">19</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -337,7 +337,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-05-24 17:17:17" itemprop="dateModified" datetime="2021-05-24T17:17:17+08:00">2021-05-24</time>
+        <time title="修改时间：2021-11-27 20:09:36" itemprop="dateModified" datetime="2021-11-27T20:09:36+08:00">2021-11-27</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -371,7 +371,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>4.3k</span>
+      <span>4.4k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -392,6 +392,10 @@
         <h3 id="python环境配置"><a href="#python环境配置" class="headerlink" title="python环境配置"></a>python环境配置</h3><p>一个系统多个python版本的管理，日常使用如何做到不污染系统python。</p>
 <a id="more"></a>
 
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$  git <span class="built_in">clone</span> https://github.com/pyenv/pyenv.git ~/.pyenv</span><br><span class="line"></span><br><span class="line">$ git <span class="built_in">clone</span> https://github.com/pyenv/pyenv-virtualenv.git $(pyenv root)/plugins/pyenv-virtualenv</span><br></pre></td></tr></table></figure>
+
+
+
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">export</span> LDFLAGS=<span class="string">&quot;-L/usr/local/opt/bzip2/lib -L/usr/local/opt/zlib/lib -L/usr/local/opt/sqlite/lib&quot;</span></span><br><span class="line"><span class="built_in">export</span> CPPFLAGS=<span class="string">&quot;-I/usr/local/opt/bzip2/include -I/usr/local/opt/zlib/include -I/usr/local/opt/sqlite/include&quot;</span></span><br><span class="line"><span class="built_in">export</span> PYTHON_CONFIGURE_OPTS=<span class="string">&quot;--enable-framework&quot;</span>  //需要加入tkinter： --with-tcl-tk</span><br><span class="line">linux用：env PYTHON_CONFIGURE_OPTS=<span class="string">&quot;--enable-shared&quot;</span> pyenv install</span><br><span class="line"></span><br><span class="line">pyenv install 3.8.6</span><br><span class="line">⚠️注意一个问题：/private/tmp的权限问题，可以sudo chown一下。</span><br></pre></td></tr></table></figure>
 
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">https://stackoverflow.com/questions/60469202/unable-to-install-tkinter-with-pyenv-pythons-on-macos</span><br><span class="line">要让python使用更新的tk库（macOS自带了8.5），可以按照如下步骤</span><br><span class="line">1. 安装tck-tk</span><br><span class="line">※ brew install tcl-tk</span><br><span class="line">※ brew info tcl-tk</span><br><span class="line">tcl-tk: stable 8.6.10 (bottled) [keg-only]</span><br><span class="line">...</span><br><span class="line">==&gt; Caveats</span><br><span class="line">tcl-tk is keg-only, <span class="built_in">which</span> means it was not symlinked into /usr/<span class="built_in">local</span>,</span><br><span class="line">because tk installs some X11 headers and macOS provides an (older) Tcl/Tk.</span><br><span class="line"></span><br><span class="line">If you need to have tcl-tk first <span class="keyword">in</span> your PATH run:</span><br><span class="line">  <span class="built_in">echo</span> <span class="string">&#x27;export PATH=&quot;/usr/local/opt/tcl-tk/bin:$PATH&quot;&#x27;</span> &gt;&gt; ~/.zshrc</span><br><span class="line"></span><br><span class="line">For compilers to find tcl-tk you may need to <span class="built_in">set</span>:</span><br><span class="line">  <span class="built_in">export</span> LDFLAGS=<span class="string">&quot;-L/usr/local/opt/tcl-tk/lib&quot;</span></span><br><span class="line">  <span class="built_in">export</span> CPPFLAGS=<span class="string">&quot;-I/usr/local/opt/tcl-tk/include&quot;</span></span><br><span class="line"></span><br><span class="line">For pkg-config to find tcl-tk you may need to <span class="built_in">set</span>:</span><br><span class="line">  <span class="built_in">export</span> PKG_CONFIG_PATH=<span class="string">&quot;/usr/local/opt/tcl-tk/lib/pkgconfig&quot;</span></span><br><span class="line">...</span><br><span class="line"></span><br><span class="line">2. 重装python</span><br><span class="line">env \</span><br><span class="line">PATH=<span class="string">&quot;<span class="subst">$(brew --prefix tcl-tk)</span>/bin:<span class="variable">$PATH</span>&quot;</span> \</span><br><span class="line">LDFLAGS=<span class="string">&quot;-L<span class="subst">$(brew --prefix tcl-tk)</span>/lib&quot;</span> \</span><br><span class="line">CPPFLAGS=<span class="string">&quot;-I<span class="subst">$(brew --prefix tcl-tk)</span>/include&quot;</span> \</span><br><span class="line">PKG_CONFIG_PATH=<span class="string">&quot;<span class="subst">$(brew --prefix tcl-tk)</span>/lib/pkgconfig&quot;</span> \</span><br><span class="line">CFLAGS=<span class="string">&quot;-I<span class="subst">$(brew --prefix tcl-tk)</span>/include&quot;</span> \</span><br><span class="line">PYTHON_CONFIGURE_OPTS=<span class="string">&quot;--enable-framework --with-tcltk-includes=&#x27;-I<span class="subst">$(brew --prefix tcl-tk)</span>/include&#x27; --with-tcltk-libs=&#x27;-L<span class="subst">$(brew --prefix tcl-tk)</span>/lib -ltcl8.6 -ltk8.6&#x27;&quot;</span> \</span><br><span class="line">pyenv install 3.8.6</span><br></pre></td></tr></table></figure>
@@ -399,7 +403,7 @@
 
 
 <p>更多配置教程：<br><a target="_blank" rel="noopener" href="https://opensource.com/article/19/6/python-virtual-environments-mac">https://opensource.com/article/19/6/python-virtual-environments-mac</a><br><a target="_blank" rel="noopener" href="https://opensource.com/article/20/4/pyenv">https://opensource.com/article/20/4/pyenv</a><br><a target="_blank" rel="noopener" href="https://opensource.com/article/19/5/python-3-default-mac">https://opensource.com/article/19/5/python-3-default-mac</a></p>
-<h4 id="python-virtual"><a href="#python-virtual" class="headerlink" title="python virtual"></a>python virtual</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">$ pyenv global 3.7.3</span><br><span class="line">$ $(pyenv <span class="built_in">which</span> python) -m pip install virtualenvwrapper</span><br><span class="line"></span><br><span class="line">$ mkvirtualenv test1</span><br><span class="line">$ mkvirtualenv test2</span><br><span class="line"></span><br><span class="line">$ mkdir -p ~/src/pyfun &amp;&amp; <span class="built_in">cd</span> ~/src/pyfun</span><br><span class="line">$ mkvirtualenv $(basename $(<span class="built_in">pwd</span>))</span><br><span class="line"><span class="comment"># we will see the environment initialize</span></span><br><span class="line">(pyfun)$ workon</span><br><span class="line">pyfun</span><br><span class="line">test1</span><br><span class="line">test2</span><br><span class="line">(pyfun)$ deactivate</span><br><span class="line">$</span><br><span class="line">$ <span class="built_in">cd</span> ~/src/pyfun</span><br><span class="line">(pyfun)$ workon .</span><br><span class="line"></span><br><span class="line">$ <span class="built_in">cd</span> ~/src/pyfun</span><br><span class="line">$ rmvirtualenv $(basename $(<span class="built_in">pwd</span>))</span><br><span class="line">$ mkvirtualenv $(basename $(<span class="built_in">pwd</span>))</span><br></pre></td></tr></table></figure>
+<h4 id="python-virtual"><a href="#python-virtual" class="headerlink" title="python virtual"></a>python virtual</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">$ pyenv global 3.7.3</span><br><span class="line">$ $(pyenv <span class="built_in">which</span> python) -m pip install virtualenvwrapper virtualenv</span><br><span class="line"></span><br><span class="line">$ mkvirtualenv test1</span><br><span class="line">$ mkvirtualenv test2</span><br><span class="line"></span><br><span class="line">$ mkdir -p ~/src/pyfun &amp;&amp; <span class="built_in">cd</span> ~/src/pyfun</span><br><span class="line">$ mkvirtualenv $(basename $(<span class="built_in">pwd</span>))</span><br><span class="line"><span class="comment"># we will see the environment initialize</span></span><br><span class="line">(pyfun)$ workon</span><br><span class="line">pyfun</span><br><span class="line">test1</span><br><span class="line">test2</span><br><span class="line">(pyfun)$ deactivate</span><br><span class="line">$</span><br><span class="line">$ <span class="built_in">cd</span> ~/src/pyfun</span><br><span class="line">(pyfun)$ workon .</span><br><span class="line"></span><br><span class="line">$ <span class="built_in">cd</span> ~/src/pyfun</span><br><span class="line">$ rmvirtualenv $(basename $(<span class="built_in">pwd</span>))</span><br><span class="line">$ mkvirtualenv $(basename $(<span class="built_in">pwd</span>))</span><br></pre></td></tr></table></figure>
 
 <h6 id="创建虚拟环境"><a href="#创建虚拟环境" class="headerlink" title="创建虚拟环境"></a>创建虚拟环境</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pyenv virtualenv 2.7.15 env-name</span><br></pre></td></tr></table></figure>
 
@@ -412,7 +416,7 @@
 <h5 id="所有命令"><a href="#所有命令" class="headerlink" title="所有命令"></a>所有命令</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line">$ pyenv commands</span><br><span class="line">activate</span><br><span class="line">commands</span><br><span class="line">completions</span><br><span class="line">deactivate</span><br><span class="line">doctor</span><br><span class="line"><span class="built_in">exec</span></span><br><span class="line">global</span><br><span class="line"><span class="built_in">help</span></span><br><span class="line">hooks</span><br><span class="line">init</span><br><span class="line">install</span><br><span class="line">installer</span><br><span class="line"><span class="built_in">local</span></span><br><span class="line">offline-installer</span><br><span class="line">prefix</span><br><span class="line"><span class="built_in">rehash</span></span><br><span class="line">root</span><br><span class="line">shell</span><br><span class="line">shims</span><br><span class="line">uninstall</span><br><span class="line">update                 <span class="comment"># 更新 pyenv 及插件</span></span><br><span class="line">version</span><br><span class="line">--version</span><br><span class="line">version-file</span><br><span class="line">version-file-read</span><br><span class="line">version-file-write</span><br><span class="line">version-name</span><br><span class="line">version-origin</span><br><span class="line">versions</span><br><span class="line">virtualenv</span><br><span class="line">virtualenv-delete</span><br><span class="line">virtualenv-init</span><br><span class="line">virtualenv-prefix</span><br><span class="line">virtualenvs</span><br><span class="line"><span class="built_in">whence</span></span><br><span class="line"><span class="built_in">which</span></span><br></pre></td></tr></table></figure>
 
 <p><a target="_blank" rel="noopener" href="http://einverne.github.io/post/2017/04/pyenv.html">http://einverne.github.io/post/2017/04/pyenv.html</a></p>
-<h3 id="MacVim安装于配置"><a href="#MacVim安装于配置" class="headerlink" title="MacVim安装于配置"></a>MacVim安装于配置</h3><p>Brew cask编译好的macvim依赖于brew的<a href="mailto:&#x70;&#x79;&#116;&#x68;&#x6f;&#110;&#x40;&#x33;&#46;&#x39;">&#x70;&#x79;&#116;&#x68;&#x6f;&#110;&#x40;&#x33;&#46;&#x39;</a>，所以需要修改编译参数：</p>
+<h3 id="MacVim安装于配置"><a href="#MacVim安装于配置" class="headerlink" title="MacVim安装于配置"></a>MacVim安装于配置</h3><p>Brew cask编译好的macvim依赖于brew的<a href="mailto:&#112;&#x79;&#116;&#104;&#111;&#110;&#x40;&#x33;&#46;&#57;">&#112;&#x79;&#116;&#104;&#111;&#110;&#x40;&#x33;&#46;&#57;</a>，所以需要修改编译参数：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ brew tap macvim-dev/macvim</span><br><span class="line">$ brew edit macvim-dev/macvim/macvim</span><br></pre></td></tr></table></figure>
 
 <p>需要把配置文件里依赖python3的路径修改为你pyenv的路径：</p>
@@ -542,13 +546,13 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="站点总字数">70k</span>
+    <span title="站点总字数">76k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">1:04</span>
+    <span title="站点阅读时长">1:09</span>
   </span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/pisces/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
